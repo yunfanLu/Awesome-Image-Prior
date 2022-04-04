@@ -88,9 +88,17 @@
 | Super-resolution   | BasicVSR++: Improving Video Super-Resolution with Enhanced Propagation and Alignment | NTIRE 2021 |
 |Super-resolution |VRT: A Video Restoration Transformer|Arxiv 2022|
 
-
-
 ### 1.3.1 Temporal sharpness prior
+**Definition:** The blur is irregular in video. Temporal sharpness prior use the sharpness pixels that are not blurred to help video deblurring.
+
+**Tasks:** Video Deblur;
+
+|Task|Title|Conference|
+|-|-|-|
+|Video Deblur|Video deblurring for hand-held cameras using patch-based synthesis.|ACM 2012|
+|Video Deblur| Cascaded deep video deblurring using temporal sharpness prior|CVPR 2020|
+|Video Deblur|ARVo: Learning All-Range Volumetric Correspondence for Video Deblurring|CVPR 2021|
+|Video Deblur|Bringing Events Into Video Deblurring With Non-Consecutively Blurry Frames|CVPR 2021|
 
 ## 1.4 Data Description
 
@@ -280,8 +288,9 @@ Tasks:
 
 **Definition:** Deblurring is the process of removing blurring artifacts from images. Deblurring recovers a sharp image S from a blurred image B, where S is convolved with K (the blur kernel) to generate B. Mathematically, this can be represented as B=S*K  (where * represents convolution).
 
+|Dataset|Description|Detail|Metric|
+| ---------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ | ---- |
 | GoPro | Deep Multi-scale Convolutional Neural Network for Dynamic Scene Deblurring | 3,214 blurred images with the size of 1,280×720  | PSNR |
-| ----- | ------------------------------------------------------------ | ------------------------------------------------ | ---- |
 | REDS  | NTIRE 2019 Challenge on Video Deblurring: Methods and Results;NTIRE 2021 Challenge on Image Deblurring | 300 video sequences with resolution of 720×1,280 | PSNR |
 | DVD   | Deep Video Deblurring for Hand-held Cameras                  | 71 videos                                        | PSNR |
 
