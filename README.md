@@ -95,13 +95,65 @@
 
 ### 1.5.1Gamma Correction
 
+**Definition:** Gamma correction is a widely used contrast manipulation scheme(nonlinear intensity transformation function) which is broadly employed in many image enhencement applications.  
+
+**Tasks:** Dehazing; Image Contrast Enhencement; 
+
+|  Task  | Title | Reference | 
+|  ----  | ----  | ---- | 
+| Dejhazing | IDGCP: Image Dehazing Based on Gamma Correction Prior | TIP 2019|
+| Image Contrast Enhencement| Contrast Improvement using Local Gamma Correction | ICACCS 2020 |
+| Dehazing| An improved Gamma correction model for image dehazing in a multi-exposure fusion framework | ELSEVIER |
+
+**note** : not based on deep learning.
+
 ### 1.5.2 Color Ellipsold 
+
+**Definition:** In the RGB color space, the vectors from hazier image signals are more densely clustered and normally distributed. The vector cluster region can be statistically approximated by an ellipsoid, where the shape of the ellipsoid is determined by the statistical moments of the vector distribution.
+
+**Tasks:** Dehazing;
+
+|  Task  | Title | Reference | 
+|  ----  | ----  | ---- | 
+| Dehazing | Single image dehazing using color ellipsoid prior | TIP 2017 |
+
+**note** : not based on deep learning.
 
 ### 1.5.3 Average Saturation
 
+**Definition:** A statistic of extensive high-definition outdoor images.
+
+**Tasks:** Dehazing;
+
+|  Task  | Title | Reference | 
+|  ----  | ----  | ---- | 
+| Dehazing | A Single Image Dehazing Method Using Average Saturation Prior | 
+
+**note** : not based on deep learning.
+
 ### 1.5.4 Histogram Destribution 
 
-### 1.5.5 Color Attenuation Priro
+**Definition:** The distribution of the contrast and brightness of images
+
+**Tasks:** Dehazing;
+
+|  Task  | Title | Reference | 
+|  ----  | ----  | ---- | 
+| Dehazing | Underwater image enhancement by dehazing with minimum information loss and histogram distribution prior | TIP 2016 | 
+
+**note** : not based on deep learning.
+
+### 1.5.5 Color Attenuation Prior
+
+**Definition:** The difference between the brightness and the saturation can approximatelyrepresentthe density of the haze.
+
+**Tasks:** Dehazing;
+
+|  Task  | Title | Reference | 
+|  ----  | ----  | ---- | 
+| Dehazing | Underwater image enhancement by dehazing with minimum information loss and histogram distribution prior | TIP 2016 | 
+
+**note** : not based on deep learning.
 
 # 2. Latent Prior
 
@@ -145,9 +197,25 @@
 
 #### 2.3.2.1 Illumination Prior
 
+**Defination:** The atmospheric illumination in hazy weather mainly has a great influence on the luminance channel in YCrCb colorspace and has less impact on the chrominance channels. 
+
+**Tasks:** Dehazing; 
+
+|  Task  | Title | Reference | 
+|  ----  | ----  | ---- | 
+| Degazing | Color-Dense Illumination Adjustment Network for Removing Haze and Smoke from Fire Scenario Images | Sensors 2022|
+
 #### 2.3.2.2 Non-Uniform
 
 #### 2.3.2.3 Atmospheric illumination
+
+**Defination:** The atmospheric illumination in hazy weather mainly has a great influence on the luminance channel in YCrCb colorspace and has less impact on the chrominance channels. 
+
+**Tasks:** Dehazing; 
+
+|  Task  | Title | Reference | 
+|  ----  | ----  | ---- | 
+| Dehazing | AIPNet: Image-to-Image Single Image Dehazing With Atmospheric Illumination Prior | TIP 2019 |
 
 ### 2.3.3 Noise Pattern
 
@@ -155,6 +223,19 @@
 
 ### 2.4.1 Gradient Channels
 
+**Defination:** Gradient profile prior (GPP) is designed to evaluate depth map from hazy images.
+
+**Tasks:** Dehazing; 
+
+|  Task  | Title | Reference | Deep learning |
+|  ----  | ----  | ---- | --- |
+| Dehazing | Single image dehazing using gradient channel prior | Springer 2019 ||
+| Dehazing | Color image dehazing using gradient channel prior and guided L0 filter | Information Science 2020 ||
+| Denoise | Gradient Prior-Aided CNN Denoiser With Separable Convolution-Based Optimization of Feature Dimension || * |
+| Pansharpening | GTP-PNet: A residual learning network based on gradient transformation prior for pansharpening | |* |
+| Desmogging | Image smog restoration using oblique gradient profile prior and energy minimization | |* |
+| Super-Resolution | Two-Way Guided Super-Resolution Reconstruction Network Based on Gradient Prior | |* |
+| Deblurr| Natural Image Deblurring Based on Ringing Artifacts Removal via Knowledge-Driven Gradient Distribution Priors | |* |
 ### 2.4.2 Extreme Channels
 
 #### 2.4.2.1 Dark Channels
@@ -166,9 +247,7 @@
 | Low Light Enhancement | Night video enhancement using improved dark channel prior    | 2013                             |
 | --------------------- | ------------------------------------------------------------ | -------------------------------- |
 | Dehazing              | Unsupervised Single Image Dehazing Using Dark Channel Prior Loss | TIP2018                          |
-| Dehazing              | Dehazing of remote sensing images using improved restoration model based dark channel prior | The Imaging Science Journal 2017 |
-
-
+| Dehazing              | Dehazing of remote sensing images using improved restoration model based dark channel prior | The Imaging Science Journal 2017
 
 #### 2.4.2.2 Light Channels
 
