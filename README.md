@@ -225,7 +225,7 @@
 
 **Defination:** Gradient profile prior (GPP) is designed to evaluate depth map from hazy images.
 
-**Tasks:** Dehazing; 
+**Tasks:** Dehazing; Denoise; Pansharpening; Desmogging; SR; Deblurr;
 
 |  Task  | Title | Reference | Deep learning |
 |  ----  | ----  | ---- | --- |
