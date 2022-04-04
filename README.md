@@ -76,7 +76,7 @@
 **Tasks:** Deblur; Image/Video SR;
 
 |Task|Title|Conference|
-| ---- | ------------------------------------------------------------ | ---------- |
+|-|-|-|
 |Optical flow|Flownet: Learning optical flow with convolutional networks|ICCV 2015|
 |Optical flow|FlowNet 2.0: Evolution of Optical Flow Estimation With Deep Networks|CVPR 2017|
 |Optical flow|Optical Flow Estimation using a Spatial Pyramid Network|CVPR 2017| 
