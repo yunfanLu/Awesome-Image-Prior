@@ -272,6 +272,10 @@ Tasks:
 | BSD (Berkeley Segmentation Dataset) | A Database of Human Segmented Natural Images and its Application to Evaluating Segmentation Algorithms and Measuring Ecological Statistics | 100 test images                                        | PSNR |
 | FFHQ (Flickr-Faces-HQ)              | A Style-Based Generator Architecture for Generative Adversarial Networks | 70,000 high-quality PNG images at 1024×1024 resolution | PSNR |
 | VGGFace2                            | VGGFace2: A dataset for recognising faces across pose and age | 3.31 million images                                    | PSNR |
+| Set5  | Low-Complexity Single-Image Super-Resolution based on Nonnegative Neighbor Embedding | 5 testing images                                    | PSNR |
+| Set14  |  On single image scaleup using sparse-representations | 14 testing images                                    | PSNR |
+| Sun-Hays 80  | Super-resolution from Internet-scale Scene Matching | 80 testing images                                    | PSNR |
+| Urban 100  |  Single Image Super-Resolution from Transformed Self-Exemplars | 100 testing urban images                                    | PSNR |
 
 ## 3.5 Video SR
 
