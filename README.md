@@ -79,7 +79,7 @@
 |-|-|-|
 |Optical flow|Flownet: Learning optical flow with convolutional networks|ICCV 2015|
 |Optical flow|FlowNet 2.0: Evolution of Optical Flow Estimation With Deep Networks|CVPR 2017|
-|Optical flow|Optical Flow Estimation using a Spatial Pyramid Network|CVPR 2017| 
+|Optical flow|Optical Flow Estimation using a Spatial Pyramid Network|CVPR 2017|
 | Super-resolution   | Frame-Recurrent Video Super-Resolution                       | CVPR 2018  |
 | Super-resolution   | Video Enhancement with Task-Oriented Flow                    | IJCV 2019  |
 | Super-resolution |TDAN: Temporally Deformable Alignment Network for Video Super-Resolution|CVPR 2018|
@@ -236,7 +236,7 @@ Tasks:
 
 **Definition:** Image Denoising is the task of removing noise from an image, e.g. the application of Gaussian noise to an image.
 
-|Dataset|Description|Detail|Metric|
+|Dataset|Paper|Detail|Metric|
 | ---------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ | ---- |
 | SIDD(Smartphone Image Denoising Dataset) | A High-Quality Denoising Dataset for Smartphone Cameras | 30,000 noisy images from 10 scenes                           | PSNR |
 | Image Denoising on DND                   | Benchmarking Denoising Algorithms with Real Photographs | 50 pairs of noisy and (nearly) noise-free images,1000 patches with 512x512 | PSNR |
@@ -246,7 +246,7 @@ Tasks:
 
 **Definition:** A demosaicing (also de-mosaicing, demosaicking or debayering) algorithm is a digital image process used to reconstruct a full color image from the incomplete color samples output from an image sensor overlaid with a color filter array (CFA). It is also known as CFA interpolation or color reconstruction.
 
-|Dataset|Description|Detail|Metric|
+|Dataset|Paper|Detail|Metric|
 | ---------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ | ---- |
 | Deep Demosaicking Dataset | Deep Joint Demosaicking and Denoising                        |                                                              | PSNR |
 | PixelShift200             | Rethinking the Pipeline of Demosaicing, Denoising and Super-Resolution | Training: 200 images Testing: 10 images Key Features: fully colored, demosiacing artifacts free Camera: SONY α7R III | PSNR |
@@ -257,7 +257,7 @@ Tasks:
 
 **Definition:**  In television and digital photography, a pattern on an object being photographed can interfere with the shape of the light sensors to generate unwanted artifacts. 
 
-|Dataset|Description|Detail|Metric|
+|Dataset|Paper|Detail|Metric|
 | ---------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ | ---- |
 | TIP 2018 | Moiré Photo Restoration Using Multiresolution Convolutional Neural Networks | 135,000 image pairs | PSNR |
 
@@ -266,7 +266,7 @@ Tasks:
 
 **Definition:**Image Super Resolution refers to the task of enhancing the resolution of an image from low-resolution (LR) to high (HR). 
 
-|Dataset|Description|Detail|Metric|
+|Dataset|Paper|Detail|Metric|
 | ---------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ | ---- |
 | KITTI                               | Are we ready for autonomous driving? The KITTI vision benchmark suite | 323 images;46 testing images;                          | PSNR |
 | BSD (Berkeley Segmentation Dataset) | A Database of Human Segmented Natural Images and its Application to Evaluating Segmentation Algorithms and Measuring Ecological Statistics | 100 test images                                        | PSNR |
@@ -277,7 +277,7 @@ Tasks:
 
 **Definition:** Video super-resolution is the task of upscaling a video from a low-resolution to a high-resolution.
 
-|Dataset|Description|Detail|Metric|
+|Dataset|Paper|Detail|Metric|
 | ---------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ | ---- |
 | Vimeo90K | Video Enhancement with Task-Oriented Flow                    | a large-scale high-quality video dataset                     | PSRN |
 | Inter4K  | AdaPool: Exponential Adaptive Pooling for Information-Retaining Downsampling | 1,000 ultra-high resolution videos with 60 frames per second (fps) from online resources. | PSNR |
@@ -288,7 +288,7 @@ Tasks:
 
 **Definition:** Deblurring is the process of removing blurring artifacts from images. Deblurring recovers a sharp image S from a blurred image B, where S is convolved with K (the blur kernel) to generate B. Mathematically, this can be represented as B=S*K  (where * represents convolution).
 
-|Dataset|Description|Detail|Metric|
+|Dataset|Paper|Detail|Metric|
 | ---------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ | ---- |
 | GoPro | Deep Multi-scale Convolutional Neural Network for Dynamic Scene Deblurring | 3,214 blurred images with the size of 1,280×720  | PSNR |
 | REDS  | NTIRE 2019 Challenge on Video Deblurring: Methods and Results;NTIRE 2021 Challenge on Image Deblurring | 300 video sequences with resolution of 720×1,280 | PSNR |
@@ -298,7 +298,7 @@ Tasks:
 
 **Definition:** HDR capture is a technique allowing to capture high dynamic range (HDR) images by taking and then combining several different exposures of the same subject matter.
 
-|Dataset|Description|Detail|Metric|
+|Dataset|Paper|Detail|Metric|
 | ---------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ | ---- |
 | NTIRE 2021 HDR                 | NTIRE 2021 Challenge on High Dynamic Range Imaging: Dataset, Methods and Results |                                                        | PSNR |
 | HDR+ Burst Photography Dataset | Burst photography for high dynamic range and low-light imaging on mobile cameras | **3640 bursts** (made up of **28461 images** in total) | PSNR |
@@ -307,7 +307,7 @@ Tasks:
 
 **Definition:** Motion interpolation or motion-compensated frame interpolation (MCFI) is a form of video processing in which intermediate animation frames are generated between existing ones by means of interpolation, in an attempt to make animation more fluid, to compensate for display motion blur, and for fake slow motion effects.
 
-|Dataset|Description|Detail|Metric|
+|Dataset|Paper|Detail|Metric|
 | ---------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ | ---- |
 | Adobe240 fps | Super SloMo: High Quality Estimation of Multiple Intermediate Frames for Video Interpolation | 1,132 video clips with 240-fps | PSNR |
 
