@@ -207,3 +207,80 @@ Tasks:
 
 
 ## 2.6 Semantic
+
+# 3 Image Enhancement Task and Dataset
+
+## 3.1 Denoise
+
+**Definition:** Image Denoising is the task of removing noise from an image, e.g. the application of Gaussian noise to an image.
+
+| SIDD(Smartphone Image Denoising Dataset) | A High-Quality Denoising Dataset for Smartphone Cameras | 30,000 noisy images from 10 scenes                           | PSNR |
+| ---------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ | ---- |
+| Image Denoising on DND                   | Benchmarking Denoising Algorithms with Real Photographs | 50 pairs of noisy and (nearly) noise-free images,1000 patches with 512x512 | PSNR |
+|                                          |                                                         |                                                              |      |
+|                                          |                                                         |                                                              |      |
+
+## 3.2 Demosaicing
+
+**Definition:** A demosaicing (also de-mosaicing, demosaicking or debayering) algorithm is a digital image process used to reconstruct a full color image from the incomplete color samples output from an image sensor overlaid with a color filter array (CFA). It is also known as CFA interpolation or color reconstruction.
+
+| Deep Demosaicking Dataset | Deep Joint Demosaicking and Denoising                        |                                                              | PSNR |
+| ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| PixelShift200             | Rethinking the Pipeline of Demosaicing, Denoising and Super-Resolution | Training: 200 images Testing: 10 images Key Features: fully colored, demosiacing artifacts free Camera: SONY α7R III | PSNR |
+
+
+
+## 3.3 Demoire
+
+**Definition:**  In television and digital photography, a pattern on an object being photographed can interfere with the shape of the light sensors to generate unwanted artifacts. 
+
+| TIP 2018 | Moiré Photo Restoration Using Multiresolution Convolutional Neural Networks | 135,000 image pairs | PSNR |
+| -------- | ------------------------------------------------------------ | ------------------- | ---- |
+|          |                                                              |                     |      |
+
+## 3.4 Image Super Resolution 
+
+**Definition:**Image Super Resolution refers to the task of enhancing the resolution of an image from low-resolution (LR) to high (HR). 
+
+| KITTI                               | Are we ready for autonomous driving? The KITTI vision benchmark suite | 323 images;46 testing images;                          | PSNR |
+| ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------ | ---- |
+| BSD (Berkeley Segmentation Dataset) | A Database of Human Segmented Natural Images and its Application to Evaluating Segmentation Algorithms and Measuring Ecological Statistics | 100 test images                                        | PSNR |
+| FFHQ (Flickr-Faces-HQ)              | A Style-Based Generator Architecture for Generative Adversarial Networks | 70,000 high-quality PNG images at 1024×1024 resolution | PSNR |
+| VGGFace2                            | VGGFace2: A dataset for recognising faces across pose and age | 3.31 million images                                    | PSNR |
+
+## 3.5 Video SR
+
+**Definition:** Video super-resolution is the task of upscaling a video from a low-resolution to a high-resolution.
+
+| Vimeo90K | Video Enhancement with Task-Oriented Flow                    | a large-scale high-quality video dataset                     | PSRN |
+| -------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+|          |                                                              |                                                              |      |
+| Inter4K  | AdaPool: Exponential Adaptive Pooling for Information-Retaining Downsampling | 1,000 ultra-high resolution videos with 60 frames per second (fps) from online resources. | PSNR |
+| REDS     | NTIRE 2019 Challenge on Video Super-Resolution: Methods and Results | 300 video sequences with resolution of 720×1,280             | PSNR |
+|          |                                                              |                                                              |      |
+
+## 3.6 Deblur 
+
+**Definition:** Deblurring is the process of removing blurring artifacts from images. Deblurring recovers a sharp image S from a blurred image B, where S is convolved with K (the blur kernel) to generate B. Mathematically, this can be represented as B=S*K  (where * represents convolution).
+
+| GoPro | Deep Multi-scale Convolutional Neural Network for Dynamic Scene Deblurring | 3,214 blurred images with the size of 1,280×720  | PSNR |
+| ----- | ------------------------------------------------------------ | ------------------------------------------------ | ---- |
+| REDS  | NTIRE 2019 Challenge on Video Deblurring: Methods and Results;NTIRE 2021 Challenge on Image Deblurring | 300 video sequences with resolution of 720×1,280 | PSNR |
+| DVD   | Deep Video Deblurring for Hand-held Cameras                  | 71 videos                                        | PSNR |
+
+## 3.7 HDR
+
+**Definition:** HDR capture is a technique allowing to capture high dynamic range (HDR) images by taking and then combining several different exposures of the same subject matter.
+
+| NTIRE 2021 HDR                 | NTIRE 2021 Challenge on High Dynamic Range Imaging: Dataset, Methods and Results |                                                        | PSNR |
+| ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------ | ---- |
+| HDR+ Burst Photography Dataset | Burst photography for high dynamic range and low-light imaging on mobile cameras | **3640 bursts** (made up of **28461 images** in total) | PSNR |
+
+## 3.8 Video Super Slow Motion
+
+**Definition:** Motion interpolation or motion-compensated frame interpolation (MCFI) is a form of video processing in which intermediate animation frames are generated between existing ones by means of interpolation, in an attempt to make animation more fluid, to compensate for display motion blur, and for fake slow motion effects.
+
+| Adobe240 fps | Super SloMo: High Quality Estimation of Multiple Intermediate Frames for Video Interpolation | 1,132 video clips with 240-fps | PSNR |
+| ------------ | ------------------------------------------------------------ | ------------------------------ | ---- |
+|              |                                                              |                                |      |
+
