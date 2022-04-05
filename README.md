@@ -99,25 +99,25 @@
 
 **Tasks:** Dehazing; Image Contrast Enhencement; 
 
-|  Task  | Title | Reference | 
-|  ----  | ----  | ---- | 
+|  Task  | Title | Reference | Deep Learning |
+|  ----  | ----  | ---- | ---- |
 | Dejhazing | IDGCP: Image Dehazing Based on Gamma Correction Prior | TIP 2019|
 | Image Contrast Enhencement| Contrast Improvement using Local Gamma Correction | ICACCS 2020 |
 | Dehazing| An improved Gamma correction model for image dehazing in a multi-exposure fusion framework | ELSEVIER |
+| Dehazing| Gamma-correction-based visibility restoration for single hazy images | IEEE 2018|
+| Image Contrast Enhencement| Automatic contrast-limited adaptive histogram equalization with dual gamma correction | IEEE 2018 |
+| Image Contrast Enhencement| Image contrast and color enhancement using adaptive gamma correction and histogram equalization | IEEE 2019 |
+| Image Contrast Enhencement| Non-linear weight adjustment in adaptive gamma correction for image contrast enhancement | Springer 2021 |
 
-**note** : not based on deep learning.
-
-### 1.5.2 Color Ellipsold 
+### 1.5.2 Color Ellipsoid 
 
 **Definition:** In the RGB color space, the vectors from hazier image signals are more densely clustered and normally distributed. The vector cluster region can be statistically approximated by an ellipsoid, where the shape of the ellipsoid is determined by the statistical moments of the vector distribution.
 
-**Tasks:** Dehazing;
+**Tasks:** Dehazing; 
 
-|  Task  | Title | Reference | 
-|  ----  | ----  | ---- | 
+|  Task  | Title | Reference | Deep Learning |
+|  ----  | ----  | ---- | ---- |
 | Dehazing | Single image dehazing using color ellipsoid prior | TIP 2017 |
-
-**note** : not based on deep learning.
 
 ### 1.5.3 Average Saturation
 
@@ -125,23 +125,21 @@
 
 **Tasks:** Dehazing;
 
-|  Task  | Title | Reference | 
-|  ----  | ----  | ---- | 
-| Dehazing | A Single Image Dehazing Method Using Average Saturation Prior | 
+|  Task  | Title | Reference | Deep Learning |
+|  ----  | ----  | ---- | ---- | 
+| Dehazing | A Single Image Dehazing Method Using Average Saturation Prior | IEEE 2018 | 
 
 **note** : not based on deep learning.
 
-### 1.5.4 Histogram Destribution 
+### 1.5.4 Histogram Distribution 
 
 **Definition:** The distribution of the contrast and brightness of images
 
 **Tasks:** Dehazing;
 
-|  Task  | Title | Reference | 
-|  ----  | ----  | ---- | 
+|  Task  | Title | Reference | Deep Learning |
+|  ----  | ----  | ---- | ---- |
 | Dehazing | Underwater image enhancement by dehazing with minimum information loss and histogram distribution prior | TIP 2016 | 
-
-**note** : not based on deep learning.
 
 ### 1.5.5 Color Attenuation Prior
 
@@ -149,11 +147,10 @@
 
 **Tasks:** Dehazing;
 
-|  Task  | Title | Reference | 
-|  ----  | ----  | ---- | 
+|  Task  | Title | Reference | Deep Learning |
+|  ----  | ----  | ---- | ---- |
 | Dehazing | Underwater image enhancement by dehazing with minimum information loss and histogram distribution prior | TIP 2016 | 
-
-**note** : not based on deep learning.
+| Dehazing | Image Dehazing Through Dark Channel Prior and Color Attenuation Prior | Springer 2021 | 
 
 # 2. Latent Prior
 
@@ -201,21 +198,31 @@
 
 **Tasks:** Dehazing; 
 
-|  Task  | Title | Reference | 
-|  ----  | ----  | ---- | 
-| Degazing | Color-Dense Illumination Adjustment Network for Removing Haze and Smoke from Fire Scenario Images | Sensors 2022|
+|  Task  | Title | Reference | Deep Learning |
+|  ----  | ----  | ---- | ---- |
+| Degazing | Color-Dense Illumination Adjustment Network for Removing Haze and Smoke from Fire Scenario Images | Sensors 2022| * |
+| Desmogging | Desmogging of smog affected images using illumination channel prior | Springer 2020 |
 
-#### 2.3.2.2 Non-Uniform
+#### 2.3.2.2 Non-Uniform illumination prior
 
-#### 2.3.2.3 Atmospheric illumination
+**Defination:** 
+**Tasks:** Image Enhencement; 
+
+|  Task  | Title | Reference | Deep Learning |
+|  ----  | ----  | ---- | ---- |
+| Image Enhencement | Low light image enhancement based on non-uniform illumination prior model | IEEE 2019 |  |
+| Image Enhencement | Underwater Non-uniform Illumination Image Correction Method Based on Dark Channel and Frequency Distribution Prior | IEEE 2021 |
+| Image Contrast Enhencement | Exposure based multi-histogram equalization contrast enhancement for non-uniform illumination images | IEEE 2019 |
+
+#### 2.3.2.3 Atmospheric illumination prior
 
 **Defination:** The atmospheric illumination in hazy weather mainly has a great influence on the luminance channel in YCrCb colorspace and has less impact on the chrominance channels. 
 
 **Tasks:** Dehazing; 
 
-|  Task  | Title | Reference | 
-|  ----  | ----  | ---- | 
-| Dehazing | AIPNet: Image-to-Image Single Image Dehazing With Atmospheric Illumination Prior | TIP 2019 |
+|  Task  | Title | Reference | Deep Learning |
+|  ----  | ----  | ---- | ---- |
+| Dehazing | AIPNet: Image-to-Image Single Image Dehazing With Atmospheric Illumination Prior | TIP 2019 | * |
 
 ### 2.3.3 Noise Pattern
 
