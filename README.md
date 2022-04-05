@@ -231,11 +231,11 @@
 |  ----  | ----  | ---- | --- |
 | Dehazing | Single image dehazing using gradient channel prior | Springer 2019 ||
 | Dehazing | Color image dehazing using gradient channel prior and guided L0 filter | Information Science 2020 ||
-| Denoise | Gradient Prior-Aided CNN Denoiser With Separable Convolution-Based Optimization of Feature Dimension || * |
-| Pansharpening | GTP-PNet: A residual learning network based on gradient transformation prior for pansharpening | |* |
-| Desmogging | Image smog restoration using oblique gradient profile prior and energy minimization | |* |
-| Super-Resolution | Two-Way Guided Super-Resolution Reconstruction Network Based on Gradient Prior | |* |
-| Deblurr| Natural Image Deblurring Based on Ringing Artifacts Removal via Knowledge-Driven Gradient Distribution Priors | |* |
+| Denoise | Gradient Prior-Aided CNN Denoiser With Separable Convolution-Based Optimization of Feature Dimension | IEEE 2018 | * |
+| Pansharpening | GTP-PNet: A residual learning network based on gradient transformation prior for pansharpening | Elsevier 2021 | * |
+| Desmogging | Image smog restoration using oblique gradient profile prior and energy minimization | Springer 2021 | * |
+| Super-Resolution | Two-Way Guided Super-Resolution Reconstruction Network Based on Gradient Prior | ICIP 2021 | * |
+| Deblurr| Natural Image Deblurring Based on Ringing Artifacts Removal via Knowledge-Driven Gradient Distribution Priors | IEEE 2020 | * |
 ### 2.4.2 Extreme Channels
 
 #### 2.4.2.1 Dark Channels
