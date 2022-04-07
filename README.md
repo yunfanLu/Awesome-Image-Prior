@@ -100,13 +100,36 @@
 |Video Deblur|ARVo: Learning All-Range Volumetric Correspondence for Video Deblurring|CVPR 2021|
 |Video Deblur|Bringing Events Into Video Deblurring With Non-Consecutively Blurry Frames|CVPR 2021|
 
-## 1.4 Data Description
+## 1.4 Hypothesis Space
 
-### 1.4.1 RGB to Wavelet
+### Transform to Frequence Domain
+**Definition:**: Transform RGB input or intermediate output to frequence domain. 
+|Task|Title|Conference|
+|-|-|-|
+|SR & Denoise|Stochastic Frequency Masking to Improve Super-Resolution and Denoising Networks |ECCV 2020|
+|Desnow|ALL Snow Removed: Single Image Desnowing Algorithm Using Hierarchical Dual-tree Complex Wavelet Representation and Contradict Channel Loss| ICCV 2021|
+|SR|Wavelet Domain Style Transfer for an Effective Perception-distortion Tradeoff in Single Image Super-Resolution| ICCV 2019|
+|SR|Wavelet-SRNet: A Wavelet-based CNN for Multi-scale Face Super Resolution |ICCV 2017|
+|Demoireing|Wavelet-Based Dual-Branch Network for Image Demoir´eing |ECCV2020|
+|Denoise|Burst Denoising via Temporally Shifted Wavelet Transforms |ECCV2020|
+|Denoise|Invertible Denoising Network: A Light Solution for Real Noise Removal |CVPR2020|
 
-### 1.4.2 RGB to frequency
 
-### 1.4.3 Facial prior
+### Mapping to Kernel Space
+**Definition:**: Mapping output to kernel space. 
+|Task|Title|Conference|
+|-|-|-|
+|Denoise|Burst Denoising with Kernel Prediction Networks | CVPR2018|
+|Demoireing|Image Demoireing with Learnable Bandpass Filters | CVPR2020|
+|Denoise|Basis Prediction Networks for Effective Burst Denoising with Large Kernels | CVPR2020|
+|Denoise|Deep Denoising of Flash and No-Flash Pairs for Photography in Low-Light Environments | CVPR2021|
+|Deblur|Explore Image Deblurring via Encoded Blur Kernel Space | CVPR2021|
+### Mapping to Sub Space
+**Definition:**: Mapping output to subspace. 
+|Task|Title|Conference|
+|-|-|-|
+|Denoise|NBNet: Noise Basis Learning for Image Denoising with Subspace Projection|CVPR2021|
+|Denoise|Deep Convolutional Dictionary Learning for Image Denoising|CVPR2021|
 
 ## 1.5 Color Description
 
