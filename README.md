@@ -193,6 +193,24 @@
 
 ### 2.3.3 Noise Pattern
 
+#### Physics
+
+|Task|Title|Conference|
+| ---- | ------------------------------------------------------------ | ---------- |
+| Denoise |A Physics-based Noise Formation Model for Extreme Low-light Raw Denoising | CVPR 2020 |
+| Deep learning|Deep Lagrangian Networks: Using Physics as Model Prior for Deep Learning| ICLR 2019 |
+
+#### Denoiser
+
+|Task|Title|Conference|
+| ---- | ------------------------------------------------------------ | ---------- |
+| Denoise| Rethink Gaussian Denoising Prior for Real-World Image Denoising | IEEE 2019 |
+| Denoise| External Prior Guided Internal Prior Learning | TIP 2018 |
+| Denoise| Integrating local and non-local denoiser priors for image restoration | ICPR 2018 |
+| Denoise | Super-Resolution via Image-Adapted Denoising CNNs: Incorporating External and Internal Learning | IEEE 2019 | 
+
+for Real-World Noisy Image Denoising
+
 ## 2.4 Statistics
 
 ### 2.4.1 Gradient Channels
