@@ -173,6 +173,7 @@
 ## 2.3 Scienes
 
 ### 2.3.1 3D facial Prior
+<img width="781" alt="image" src="https://user-images.githubusercontent.com/49426295/163704325-12339706-4709-42d1-a361-89969e97e13e.png">
 
 **Definition:** Utilize the 3D information of the face for human
 
