@@ -181,6 +181,9 @@
 |Task|Title|Conference|
 | ---- | ------------------------------------------------------------ | ---------- |
 | Deblur | Face video deblurring using 3D facial priors | ICCV 2019 |
+| Restorision | Towards Real-World Blind Face Restoration with Generative Facial Prior | CVPR 2021 |
+| SR | FSRNet: End-to-End Learning Face Super-Resolution with Facial Priors | CVPR 2018 |
+| SR | FSRGAN-DB: Super-resolution Reconstruction Based on Facial Prior Knowledge | ICBD 2020 |
 
 
 ### 2.3.2 Nature Environment
