@@ -23,7 +23,7 @@
 
 
 
-# 1.Handcrafted Prior
+# 1.Ruled Prior
 
 ## 1.1 Regularization
 
