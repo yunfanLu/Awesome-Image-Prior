@@ -15,11 +15,11 @@
 
 # Image Enhancement Classification
 
-![](ImageEnhancement.png)
+![](./2-pipeline.png)
 
 # Prior Classification
 
-![](./ImagePrior.png)
+![](./1-prior-application.png)
 
 
 
