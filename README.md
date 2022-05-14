@@ -14,8 +14,6 @@
 </p>
 
 
-
-
 <h2>Table of contents</h2>
 
 - [1.Ruled Prior](#1ruled-prior)
@@ -165,6 +163,7 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 |CVPR 2022 | Camliflow: bidirectional camera-lidar fusion for joint optical flow and scene flow estimation | | |
 |PAMI 2023 | Cascaded Deep Video Deblurring Using Temporal Sharpness Prior and Non-local Spatial-Temporal Similarity | | |
 
+
 ---
 #### Deep learning-based optical methods
 - [Optical-flow] Flownet: Learning optical flow with convolutional networks, CVPR 2017.
@@ -203,6 +202,7 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 - [Video-deblurring] Cascaded deep video deblurring using temporal sharpness prior, CVPR 2020.
 - [Video-deblurring] Bringing events into video deblurring with non-consecutively blurry frames, ICCV 2021.
 - [Video-deblurring] Arvo: Learning all-range volumetric correspondence for video deblurring, CVPR 2021.
+- [Video-deblurring] Efficient Video Deblurring Guided by Motion Magnitude, ECCV, 2022. [Project](https://github.com/sollynoay/MMP-RNN),[Paper](https://arxiv.org/abs/2207.13374)
 
 
 **Others:**
