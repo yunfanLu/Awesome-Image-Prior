@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 
 <p align="center">
-  <h3 align="center">Awesome-Image-Prior</h3>
+  <h2 align="center">Awesome-Image-Prior</h2>
   <p align="center">A curated list of resources for Prior in Image or Video 
     <br />
     <br />
@@ -25,34 +25,26 @@
 
 # 1.Ruled Prior
 
-## 1.1 Regularization
+## 1.1 High-Level Semantic Information as Prior
 
-### 1.1.1 Total Variation Regularization
+**Definition:**
 
-**Definition:** Total variation regularization or total variation filtering, is a noise removal process (filter). It is based on the principle that signals with excessive and possibly spurious detail have high total variation, that is, the integral of the absolute image gradient is high. 
+|Conference|Title|Task|
+| ---- | :----------------------------------------------------------- | ---------- |
+| TIP 2018 | Deep video dehazing with semantic segmentation              | Video Dehazing |
+| CVPR 2018 | Deep semantic face deblurring | Human Face Deblur |
+| CVPR 2018 | Recovering realistic texture in image super-resolution by deep spatial feature transform | Super-Resolution |
+| CVPR 2018 | High-resolution image synthesis and semantic manipulation with conditional gans | Super-Resolution |
+| CVPR 2019 | Human-aware motion deblurring | Human Motion Deblur |
+| ICCV 2019 | Srobb: Targeted perceptual loss for single image superresolution | Super-Resolution |
+| CVPR 2020 | Dual super-resolution learning for semantic segmentation | Super-Resolution |
+| ACM-MM 2020 | Integrating semantic segmentation and retinex model for low-light image enhancement | Low-light; Denoise |
+| CVPR 2021 | Progressive semantic-aware style transformation for blind face restoration | Human Face Restoration |
+| ICCV 2021 | Spatiallyadaptive image restoration using distortion-guided networks | Image Restoration |
+| ACM-MM 2022 | Close the loop: A unified bottomup and top-down paradigm for joint image deraining and segmentation | Deraining |
+| WACV 2022 | Sapnet: Segmentation-aware progressive network for perceptual contrastive deraining | Deraining |
 
-**Tasks:** Deblur; 
-
-|Task|Title|Conference|
-| ---- | ------------------------------------------------------------ | ---------- |
-| Deblur | Total variation blind deconvolution | TIP  |
-
-
-
-### 1.1.2 L 0-regularized prior
-
-**Definintion:** L 0-regularized describes the sparsity of image pixels.
-
-**Task:** Deblur; Dehazing;
-
-|Task|Title|Conference|
-| ---- | ------------------------------------------------------------ | ---------- |
-| Deblur | Unnatural L 0sparse representation for natural image deblurring | CVPR 2013 |
-| Deblur | L 0-regularized intensity and gradient prior for deblurring text images and beyond | PAMI 2016 |
-
-
-
-## 1.2 Gradient
+## 1.2 Image statistical features as prior
 
 ### 1.2.1 Heavy-tailed gradient distributions
 
@@ -359,5 +351,4 @@ Tasks:
 |Dataset|Paper|Detail|Metric|
 | ---------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ | ---- |
 | Adobe240 fps | Super SloMo: High Quality Estimation of Multiple Intermediate Frames for Video Interpolation | 1,132 video clips with 240-fps | PSNR |
-
 
