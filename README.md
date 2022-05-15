@@ -13,8 +13,8 @@
   </p>
 </p>
 
-# Table of **contents**
-- [Table of **contents**](#table-of-contents)
+<h2>Table of contents</h2>
+
 - [Image Enhancement Classification](#image-enhancement-classification)
 - [Prior Classification](#prior-classification)
 - [1.Ruled Prior](#1ruled-prior)
