@@ -51,7 +51,6 @@
 ![](img/2-pipeline.png)
 # Prior Classification
 ![](img/1-prior-application.png)
-![](img/4-Overall.png)
 
 # 1.Ruled Prior
 
