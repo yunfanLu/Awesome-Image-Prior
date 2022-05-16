@@ -60,7 +60,7 @@
 | WACV 2022 | Sapnet: Segmentation-aware progressive network for perceptual contrastive deraining | Deraining |
 
 ## 1.2 Image Statistical Features as Prior
-**Definition:** Statistical image features can be divided into two categories, the statistical intensity features and the statistical gradient features.
+Statistical image features can be divided into two categories, the statistical intensity features and the statistical gradient features.
 
 <h2>Representative work</h2>
 
@@ -80,7 +80,7 @@ CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super 
 ---
 
 ### 1.2.1 Statistical Intensity Features
-**Definition:** Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
+Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
 
 ---
 #### dark channels prior
@@ -105,7 +105,7 @@ CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super 
 ---
 
 ### 1.2.2 Statistical Gradient Feature
-**Definition:** Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
+Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
 
 ---
 #### local maximum gradient prior
@@ -123,10 +123,63 @@ CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super 
 
 
 ## 1.3 Temporal Prior
+Temporal prior is specific in video restoration and enhancement tasks. Unlike the priors in the image, the priors in videos mainly come from temporal information, which is the relationship between frames.
+### 1.3.1 Optical Flow
+Optical flow is the motion of objects, surfaces, and edges between consecutive frames of sequence caused by the observer and scene.
 
-### 1.2.1 Optical Flow
+<h2>Representative work</h2>
 
-### 1.2.2 Temporal Sharpness Prior
+|Publication|Title|Task|Optical flow approach|Highlight|
+|-|-|-|-|-|
+|CVPR 2018|Frame-recurrent video super-resolution| VSR | FNet  |  Recurrent framework with optical flow estimation network(FNet)|
+|IJCV 2019|Video enhancement with task-oriented flow| VSR | SPyNet| Task-oriented optical flow framework |
+|NTIRE 2021|BasicVSR++: Improving video super-resolution with enhanced propagation and alignment| VSR | SPyNet | Use optical flow to guide the DCN|
+|arXiv 2022|Vrt: A video restoration transformer| VSR | SPyNet | Use optical flow to guide the deep network based on self-attention |
+|CVPR 2020|Cascaded deep video deblurring using temporal sharpness prior| Video deblurring | PWC-Net | Use optical flow to construct the temporal sharpness prior|
+|CVPR 2021|Arvo: Learning all-range volumetric correspondence for video deblurring| Video deblurring | PWC-Net | Use optical flow to construct the temporal sharpness prior|
+|CVPR 2021|Bringing events into video deblurring with non-consecutively blurry frames| Video deblurring | PWC-Net | Use optical flow to construct the temporal sharpness prior|
+|CVPR 2019|Frame-consistent recurrent video deraining with dual-level flow| Video derainingR |FlowNet| Optical flow help extract the temporal rain-related feature|
+|ICCP 2019|A fast, scalable, and reliable deghosting method for extreme exposure fusion| Multi-Exposure HDR |PWC-Net| Align multi-exposure image|
+|TPAMI 2019|Memc-net: Motion estimation and motion compensation driven neural network for video interpolation and enhancement|video frame interpolation |PWC-net| Lead the flow-based motion interpolation algorithms| 
+
+---
+#### Deep learning-based optical methods
+[Optical-flow] Flownet: Learning optical flow with convolutional networks, CVPR 2017.</br>
+[Optical-flow] Flownet 2.0: Evolution of optical flow estimation with deep networks, CVPR 2017.</br>
+[Optical-flow] Optical flow estimation using a spatial pyramid network, CVPR 2017.</br>
+[Optical-flow] Pwc-net: Cnns for optical flow using pyramid, warping, and cost volume, CVPR 2018.</br>
+
+---
+#### Deep learning-based optical methods
+![](img/optical-flow.png)
+
+**(a)** Directly use optical flow in video super-resolution
+
+[Video-super-resolution] Frame-recurrent video super-resolution, CVPR 2018.</br>
+[Video-super-resolution] Video enhancement with task-oriented flow, IJCV 2019.</br>
+
+**(b)** Combine DCN/attention with optical flow in video super-resolution
+
+[Video-super-resolution] BasicVSR++: Improving video super-resolution with enhanced propagation and alignment, arXiv 2021.</br>
+[Video-super-resolution] Vrt: A video restoration transformer. </br>
+
+**(c)** Optical flow in multi-exposure HDR imaging
+
+[Multi-Exposure-HDR] Deep high dynamic range imaging of dynamic scenes, ACM 2017.</br>
+[Multi-Exposure-HDR] Multi-scale dense networks for deep high dynamic range imaging, WACV 2019.</br>
+[Multi-Exposure-HDR] A fast, scalable, and reliable deghosting method for extreme exposure fusion, ICCP 2019.</br>
+[Multi-Exposure-HDR] Deep HDR reconstruction of dynamic scenes, ICIVC 2018.</br>
+
+**(d)** Construct temporal sharpness prior by optical flow
+
+[Video-deblurring] Cascaded deep video deblurring using temporal sharpness prior, CVPR 2020.
+[Video-deblurring] Bringing events into video deblurring with non-consecutively blurry frames, ICCV 2021.
+[Video-deblurring] Arvo: Learning all-range volumetric correspondence for video deblurring, CVPR 2021.
+
+
+**Others:**
+
+### 1.3.2 Temporal Sharpness Prior
 
 ## 1.4 Transformation as Prior
 
