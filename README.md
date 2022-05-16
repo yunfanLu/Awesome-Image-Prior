@@ -102,8 +102,8 @@ CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super 
 **Definition:** Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
 
 #### dark channels prior
-- **[Deblurring]** Blind image deblurring using dark channel prior, CVPR 2016.
-- [Dehazing] Single image haze removal using dark channel prior, IEEE TPAMI 2010.
+**[Deblurring]** Blind image deblurring using dark channel prior, CVPR 2016.
+**[Dehazing]** Single image haze removal using dark channel prior, IEEE TPAMI 2010.
 
 #### bright channels prior
 - [Deblurring] Image deblurring via extreme channels prior, CVPR 2017.
