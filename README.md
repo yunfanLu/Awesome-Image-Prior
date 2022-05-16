@@ -67,9 +67,9 @@
 Representative application of statistical features in image/video restoration and enhancement tasks
 |Publication|Title|Task|Statistical Features|Highlight|
 |-|-|-|-|-|
-PAMI 2016|L0 -regularized intensity and gradient prior for deblurring text images and beyond|Text deblurring|Two-tone distribution| $L_0$ regularization; Two-tone distribution 
-CVPR 2016|Blind image deblurring using dark channel prior| Deblurring| Dark channel| First work; Min operator linear approximation 
-CVPR 2017|Image deblurring via extreme channels prior| Deblurring| Bright channel| First work; Kernel estimation; Bright image 
+[PAMI 2016](https://openreview.net/pdf?id=IucGD5fQBV)|L0 -regularized intensity and gradient prior for deblurring text images and beyond|Text deblurring|Two-tone distribution| $L_0$ regularization; Two-tone distribution 
+[CVPR 2016](https://openaccess.thecvf.com/content_cvpr_2016/papers/Pan_Blind_Image_Deblurring_CVPR_2016_paper.pdf)|Blind image deblurring using dark channel prior| Deblurring| Dark channel| First work; Min operator linear approximation 
+[CVPR 2017](https://openaccess.thecvf.com/content_cvpr_2017/papers/Yan_Image_Deblurring_via_CVPR_2017_paper.pdf)|Image deblurring via extreme channels prior| Deblurring| Bright channel| First work; Kernel estimation; Bright image 
 ICIP 2017|Low-light image enhancement using CNN and bright channel prior| Low-light enhancement | Bright channel| As a part of the CNN model 
 TIP 2017|Deep edge guided recurrent residual learning for image super-resolution| Super Resolution| Edge guided | First recurrent network model in SR  
 CVPR 2019 | Blind image deblurring with local maximum gradient prior| Deblurring| Local maximum gradient prior  | First work; Local maximum gradient prior
@@ -119,6 +119,7 @@ CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super 
 [Dehazing] Single image dehazing using gradient channel prior, Applied Intelligence 2019.</br>
 [Dehazing] Color image dehazing using gradient channel prior and guided l0 filter, Information Sciences 2020.</br>
 
+---
 
 
 ## 1.3 Temporal Prior
