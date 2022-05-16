@@ -172,9 +172,9 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 
 **(d)** Construct temporal sharpness prior by optical flow
 
-[Video-deblurring] Cascaded deep video deblurring using temporal sharpness prior, CVPR 2020.
-[Video-deblurring] Bringing events into video deblurring with non-consecutively blurry frames, ICCV 2021.
-[Video-deblurring] Arvo: Learning all-range volumetric correspondence for video deblurring, CVPR 2021.
+- [Video-deblurring] Cascaded deep video deblurring using temporal sharpness prior, CVPR 2020.
+- [Video-deblurring] Bringing events into video deblurring with non-consecutively blurry frames, ICCV 2021.
+- [Video-deblurring] Arvo: Learning all-range volumetric correspondence for video deblurring, CVPR 2021.
 
 
 **Others:**
