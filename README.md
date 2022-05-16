@@ -163,6 +163,11 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 - [Video-super-resolution] BasicVSR++: Improving video super-resolution with enhanced propagation and alignment, arXiv 2021.
 - [Video-super-resolution] Vrt: A video restoration transformer. 
 
+*VSR without optical flow:
+- [Video-super-resolution] Deep video super-resolution network using dynamic upsampling filters without explicit motion compensation, CVPR 2018.
+- [Video-super-resolution] Edvr: Video restoration with enhanced deformable convolutional networks, CVPR Workshops 2019.
+- [Video-super-resolution] Tdan: Temporally-deformable alignment network for video super-resolution, CVPR 2020.
+
 **(c)** Optical flow in multi-exposure HDR imaging
 
 - [Multi-Exposure-HDR] Deep high dynamic range imaging of dynamic scenes, ACM 2017.
@@ -178,6 +183,9 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 
 
 **Others:**
+- [Optical-flow] Large displacement optical flow: descriptor matching in variational motion estimation, TPAMI 2010.
+- [Video-deraining] Frame-consistent recurrent video deraining with dual-level flow, CVPR 2019.
+- [Video-frame-interpolation] Memc-net: Motion estimation and motion compensation driven neural network for video interpolation and enhancement, TPAMI 2019.
 
 ### 1.3.2 Temporal Sharpness Prior
 
