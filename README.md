@@ -13,6 +13,8 @@
   </p>
 </p>
 
+
+
 <h2>Table of contents</h2>
 
 - [Image Enhancement Classification](#image-enhancement-classification)
@@ -20,45 +22,21 @@
 - [1.Ruled Prior](#1ruled-prior)
   - [1.1 High-Level Semantic Information as Prior](#11-high-level-semantic-information-as-prior)
   - [1.2 Image Statistical Features as Prior](#12-image-statistical-features-as-prior)
-    - [1.2.1 Statistical Intensity Features](#121-statistical-intensity-features)
-      - [dark channels prior](#dark-channels-prior)
-      - [bright channels prior](#bright-channels-prior)
-      - [two-tone distribution](#two-tone-distribution)
-      - [two-color prior](#two-color-prior)
-      - [histogram equalization prior](#histogram-equalization-prior)
-    - [1.2.2 Statistical Gradient Feature](#122-statistical-gradient-feature)
-      - [local maximum gradient prior](#local-maximum-gradient-prior)
-      - [gradient guidance prior](#gradient-guidance-prior)
-      - [gradient channel prior](#gradient-channel-prior)
   - [1.3 Temporal Prior](#13-temporal-prior)
-    - [1.2.1 Optical Flow](#121-optical-flow)
-    - [1.2.2 Temporal Sharpness Prior](#122-temporal-sharpness-prior)
   - [1.4 Transformation as Prior](#14-transformation-as-prior)
-    - [1.4.1 Learning with Frequency Information](#141-learning-with-frequency-information)
-    - [1.4.2 Other Transformation](#142-other-transformation)
   - [1.5 Physical-based Priors](#15-physical-based-priors)
-    - [1.5.1 Atmospheric Scattering Model](#151-atmospheric-scattering-model)
-    - [1.5.2 Rain Model](#152-rain-model)
-    - [1.5.3 Retinex Model](#153-retinex-model)
   - [1.6 Explicit Modelling Kernel and Noise Information as Prior](#16-explicit-modelling-kernel-and-noise-information-as-prior)
-    - [1.6.1 Explicit Modelling in Modular Design](#161-explicit-modelling-in-modular-design)
-    - [1.6.2 Explicit Modelling in Training Set Synthetic](#162-explicit-modelling-in-training-set-synthetic)
   - [1.7 Data Degradation as Prior](#17-data-degradation-as-prior)
-    - [1.7.1 Motion Blur Model](#171-motion-blur-model)
-    - [1.7.2 Compression Information as Prior](#172-compression-information-as-prior)
 - [2. Latent Prior](#2-latent-prior)
   - [2.1 Non-local Self-similarity](#21-non-local-self-similarity)
   - [2.2 Facial Prior](#22-facial-prior)
   - [2.3 Deep Image Prior](#23-deep-image-prior)
   - [2.4 Pre-trained Model as Prior](#24-pre-trained-model-as-prior)
-    - [2.4.1 GAN Prior](#241-gan-prior)
-    - [2.4.2 Generative Priors in Training Set Synthetic](#242-generative-priors-in-training-set-synthetic)
-    - [2.4.3 Deep Denoiser Prior for Regularization](#243-deep-denoiser-prior-for-regularization)
 
 # Image Enhancement Classification
-![](img/2-pipeline.png)
+
 # Prior Classification
-![](img/1-prior-application.png)
+
 
 # 1.Ruled Prior
 
@@ -101,37 +79,40 @@ CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super 
 ### 1.2.1 Statistical Intensity Features
 **Definition:** Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
 
+---
 #### dark channels prior
-- **[Deblurring]** Blind image deblurring using dark channel prior, CVPR 2016.
-- **[Dehazing]** Single image haze removal using dark channel prior, IEEE TPAMI 2010.
+**[Deblurring]** Blind image deblurring using dark channel prior, CVPR 2016.</br>
+**[Dehazing]** Single image haze removal using dark channel prior, IEEE TPAMI 2010.</br>
 
 #### bright channels prior
-- **[Deblurring]** Image deblurring via extreme channels prior, CVPR 2017.
-- **[Low-light]** Low-light image enhancement using CNN and bright channel prior, ICPC 2017.
-- **[Low-light]** Unsupervised low-light image enhancement using bright channel prior, IEEE Signal Processing Letters 2010.
+**[Deblurring]** Image deblurring via extreme channels prior, CVPR 2017.</br>
+**[Low-light]** Low-light image enhancement using CNN and bright channel prior, ICPC 2017.</br>
+**[Low-light]** Unsupervised low-light image enhancement using bright channel prior, IEEE Signal Processing Letters 2010.</br>
 
 #### two-tone distribution
-- **[Deblurring]** L0 -regularized intensity and gradient prior for deblurring text images and beyond, TPAMI 2016.
+**[Deblurring]** L0 -regularized intensity and gradient prior for deblurring text images and beyond, TPAMI 2016.
 
 #### two-color prior
-- **[Deblurring&Denoising]** Image deblurring and denoising using color priors, CVPR 2009.
+**[Deblurring&Denoising]** Image deblurring and denoising using color priors, CVPR 2009.</br>
 
 #### histogram equalization prior
-- **[Survey]** Histogram equalization variants as optimization problems: a review, Archives of Computational Methods in Engineering 2021.
-- **[Image-enhancement]** Underwater image enhancement with global--local networks and compressed-histogram equalization, Signal Processing: Image Communication 2020.
+**[Survey]** Histogram equalization variants as optimization problems: a review, Archives of Computational Methods in Engineering 2021. </br>
+**[Image-enhancement]** Underwater image enhancement with global--local networks and compressed-histogram equalization, Signal Processing: Image Communication 2020.</br>
 
 ### 1.2.2 Statistical Gradient Feature
+**Definition:** Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
 
+---
 #### local maximum gradient prior
-- [Deblurring] Blind image deblurring with local maximum gradient prior, CVPR 2019.
+**[Deblurring]** Blind image deblurring with local maximum gradient prior, CVPR 2019.
   
 #### gradient guidance prior
-- [SR] Image super-resolution using gradient profile prior, CVPR 2008.
-- [SR] Structure-preserving super resolution with gradient guidance, CVPR 2020.
+**[SR]** Image super-resolution using gradient profile prior, CVPR 2008.</br>
+**[SR]** Structure-preserving super resolution with gradient guidance, CVPR 2020.</br>
 
 #### gradient channel prior
-- [Dehazing] Single image dehazing using gradient channel prior, Applied Intelligence 2019.
-- [Dehazing] Color image dehazing using gradient channel prior and guided l0 filter, Information Sciences 2020.
+**[Dehazing]** Single image dehazing using gradient channel prior, Applied Intelligence 2019.</br>
+**[Dehazing]** Color image dehazing using gradient channel prior and guided l0 filter, Information Sciences 2020.</br>
 
 
 
