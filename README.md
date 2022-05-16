@@ -77,6 +77,8 @@ AI 2019   | Single image dehazing using gradient channel prior| Dehazing| Gradie
 ISPL 2020 |Unsupervised low-light image enhancement using bright channel prior| Low-light enhancement | Bright channel| Unsupervised learning approach 
 CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super Resolution| Gradient guidance | Proposed Gradient maps 
 
+---
+
 ### 1.2.1 Statistical Intensity Features
 **Definition:** Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
 
@@ -99,6 +101,8 @@ CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super 
 #### histogram equalization prior
 [Survey] Histogram equalization variants as optimization problems: a review, Archives of Computational Methods in Engineering 2021. </br>
 [Image-enhancement] Underwater image enhancement with global--local networks and compressed-histogram equalization, Signal Processing: Image Communication 2020.</br>
+
+---
 
 ### 1.2.2 Statistical Gradient Feature
 **Definition:** Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
