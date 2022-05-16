@@ -84,23 +84,23 @@ Statistical features of high-quality image intensity have strong sparsity, which
 
 ---
 #### dark channels prior
-[Deblurring] Blind image deblurring using dark channel prior, CVPR 2016.</br>
-[Dehazing] Single image haze removal using dark channel prior, IEEE TPAMI 2010.</br>
+- [Deblurring] Blind image deblurring using dark channel prior, CVPR 2016.
+- [Dehazing] Single image haze removal using dark channel prior, IEEE TPAMI 2010.
 
 #### bright channels prior
-[Deblurring] Image deblurring via extreme channels prior, CVPR 2017.</br>
-[Low-light] Low-light image enhancement using CNN and bright channel prior, ICPC 2017.</br>
-[Low-light] Unsupervised low-light image enhancement using bright channel prior, IEEE Signal Processing Letters 2010.</br>
+- [Deblurring] Image deblurring via extreme channels prior, CVPR 2017.
+- [Low-light] Low-light image enhancement using CNN and bright channel prior, ICPC 2017.
+- [Low-light] Unsupervised low-light image enhancement using bright channel prior, IEEE Signal Processing Letters 2010.
 
 #### two-tone distribution
-[Deblurring] L0 -regularized intensity and gradient prior for deblurring text images and beyond, TPAMI 2016.
+- [Deblurring] L0 -regularized intensity and gradient prior for deblurring text images and beyond, TPAMI 2016.
 
 #### two-color prior
-[Deblurring&Denoising] Image deblurring and denoising using color priors, CVPR 2009.</br>
+- [Deblurring&Denoising] Image deblurring and denoising using color priors, CVPR 2009.
 
 #### histogram equalization prior
-[Survey] Histogram equalization variants as optimization problems: a review, Archives of Computational Methods in Engineering 2021. </br>
-[Image-enhancement] Underwater image enhancement with global--local networks and compressed-histogram equalization, Signal Processing: Image Communication 2020.</br>
+- [Survey] Histogram equalization variants as optimization problems: a review, Archives of Computational Methods in Engineering 2021. 
+- [Image-enhancement] Underwater image enhancement with global--local networks and compressed-histogram equalization, Signal Processing: Image Communication 2020.
 
 ---
 
@@ -109,15 +109,15 @@ Statistical features of high-quality image intensity have strong sparsity, which
 
 ---
 #### local maximum gradient prior
-[Deblurring] Blind image deblurring with local maximum gradient prior, CVPR 2019.
+- [Deblurring] Blind image deblurring with local maximum gradient prior, CVPR 2019.
   
 #### gradient guidance prior
-[SR] Image super-resolution using gradient profile prior, CVPR 2008.</br>
-[SR] Structure-preserving super resolution with gradient guidance, CVPR 2020.</br>
+- [Super-resolution] Image super-resolution using gradient profile prior, CVPR 2008.
+- [Super-resolution] Structure-preserving super resolution with gradient guidance, CVPR 2020.
 
 #### gradient channel prior
-[Dehazing] Single image dehazing using gradient channel prior, Applied Intelligence 2019.</br>
-[Dehazing] Color image dehazing using gradient channel prior and guided l0 filter, Information Sciences 2020.</br>
+- [Dehazing] Single image dehazing using gradient channel prior, Applied Intelligence 2019.
+- [Dehazing] Color image dehazing using gradient channel prior and guided l0 filter, Information Sciences 2020.
 
 ---
 
@@ -144,10 +144,10 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 
 ---
 #### Deep learning-based optical methods
-[Optical-flow] Flownet: Learning optical flow with convolutional networks, CVPR 2017.</br>
-[Optical-flow] Flownet 2.0: Evolution of optical flow estimation with deep networks, CVPR 2017.</br>
-[Optical-flow] Optical flow estimation using a spatial pyramid network, CVPR 2017.</br>
-[Optical-flow] Pwc-net: Cnns for optical flow using pyramid, warping, and cost volume, CVPR 2018.</br>
+- [Optical-flow] Flownet: Learning optical flow with convolutional networks, CVPR 2017.
+- [Optical-flow] Flownet 2.0: Evolution of optical flow estimation with deep networks, CVPR 2017.
+- [Optical-flow] Optical flow estimation using a spatial pyramid network, CVPR 2017.
+- [Optical-flow] Pwc-net: Cnns for optical flow using pyramid, warping, and cost volume, CVPR 2018.
 
 ---
 #### Deep learning-based optical methods
@@ -155,20 +155,20 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 
 **(a)** Directly use optical flow in video super-resolution
 
-[Video-super-resolution] Frame-recurrent video super-resolution, CVPR 2018.</br>
-[Video-super-resolution] Video enhancement with task-oriented flow, IJCV 2019.</br>
+- [Video-super-resolution] Frame-recurrent video super-resolution, CVPR 2018.
+- [Video-super-resolution] Video enhancement with task-oriented flow, IJCV 2019.
 
 **(b)** Combine DCN/attention with optical flow in video super-resolution
 
-[Video-super-resolution] BasicVSR++: Improving video super-resolution with enhanced propagation and alignment, arXiv 2021.</br>
-[Video-super-resolution] Vrt: A video restoration transformer. </br>
+- [Video-super-resolution] BasicVSR++: Improving video super-resolution with enhanced propagation and alignment, arXiv 2021.
+- [Video-super-resolution] Vrt: A video restoration transformer. 
 
 **(c)** Optical flow in multi-exposure HDR imaging
 
-[Multi-Exposure-HDR] Deep high dynamic range imaging of dynamic scenes, ACM 2017.</br>
-[Multi-Exposure-HDR] Multi-scale dense networks for deep high dynamic range imaging, WACV 2019.</br>
-[Multi-Exposure-HDR] A fast, scalable, and reliable deghosting method for extreme exposure fusion, ICCP 2019.</br>
-[Multi-Exposure-HDR] Deep HDR reconstruction of dynamic scenes, ICIVC 2018.</br>
+- [Multi-Exposure-HDR] Deep high dynamic range imaging of dynamic scenes, ACM 2017.
+- [Multi-Exposure-HDR] Multi-scale dense networks for deep high dynamic range imaging, WACV 2019.
+- [Multi-Exposure-HDR] A fast, scalable, and reliable deghosting method for extreme exposure fusion, ICCP 2019.
+- [Multi-Exposure-HDR] Deep HDR reconstruction of dynamic scenes, ICIVC 2018.
 
 **(d)** Construct temporal sharpness prior by optical flow
 
