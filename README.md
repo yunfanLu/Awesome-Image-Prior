@@ -20,8 +20,16 @@
 - [1.Ruled Prior](#1ruled-prior)
   - [1.1 High-Level Semantic Information as Prior](#11-high-level-semantic-information-as-prior)
   - [1.2 Image Statistical Features as Prior](#12-image-statistical-features-as-prior)
-    - [1.2.1 Heavy-tailed Gradient Distributions](#121-heavy-tailed-gradient-distributions)
+    - [1.2.1 Statistical Intensity Features](#121-statistical-intensity-features)
+      - [dark channels prior](#dark-channels-prior)
+      - [bright channels prior](#bright-channels-prior)
+      - [two-tone distribution](#two-tone-distribution)
+      - [two-color prior](#two-color-prior)
+      - [histogram equalization prior](#histogram-equalization-prior)
     - [1.2.2 Statistical Gradient Feature](#122-statistical-gradient-feature)
+      - [local maximum gradient prior](#local-maximum-gradient-prior)
+      - [gradient guidance prior](#gradient-guidance-prior)
+      - [gradient channel prior](#gradient-channel-prior)
   - [1.3 Temporal Prior](#13-temporal-prior)
     - [1.2.1 Optical Flow](#121-optical-flow)
     - [1.2.2 Temporal Sharpness Prior](#122-temporal-sharpness-prior)
@@ -74,10 +82,58 @@
 | WACV 2022 | Sapnet: Segmentation-aware progressive network for perceptual contrastive deraining | Deraining |
 
 ## 1.2 Image Statistical Features as Prior
+**Definition:** Statistical image features can be divided into two categories, the statistical intensity features and the statistical gradient features.
 
-### 1.2.1 Heavy-tailed Gradient Distributions
+
+**Representative application of statistical features in image/video restoration and enhancement tasks**
+|Publication|Title|Task|Statistical Features|Highlight|
+|-|-|-|-|-|
+PAMI 2016|L0 -regularized intensity and gradient prior for deblurring text images and beyond|Text deblurring|Two-tone distribution| $L_0$ regularization; Two-tone distribution 
+CVPR 2016|Blind image deblurring using dark channel prior| Deblurring| Dark channel| First work; Min operator linear approximation 
+CVPR 2017|Image deblurring via extreme channels prior| Deblurring| Bright channel| First work; Kernel estimation; Bright image 
+ICIP 2017|Low-light image enhancement using CNN and bright channel prior| Low-light enhancement | Bright channel| As a part of the CNN model 
+TIP 2017|Deep edge guided recurrent residual learning for image super-resolution| Super Resolution| Edge guided | First recurrent network model in SR  
+CVPR 2019 | Blind image deblurring with local maximum gradient prior| Deblurring| Local maximum gradient prior  | First work; Local maximum gradient prior
+AI 2019   | Single image dehazing using gradient channel prior| Dehazing| Gradient channel prior  | Gradient prior; Depth map 
+ISPL 2020 |Unsupervised low-light image enhancement using bright channel prior| Low-light enhancement | Bright channel| Unsupervised learning approach 
+CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super Resolution| Gradient guidance | Proposed Gradient maps 
+
+### 1.2.1 Statistical Intensity Features
+**Definition:** Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
+
+#### dark channels prior
+- **[Deblurring]** Blind image deblurring using dark channel prior, CVPR 2016.
+- [Dehazing] Single image haze removal using dark channel prior, IEEE TPAMI 2010.
+
+#### bright channels prior
+- [Deblurring] Image deblurring via extreme channels prior, CVPR 2017.
+- [Low-light] Low-light image enhancement using CNN and bright channel prior, ICPC 2017.
+- [Low-light] Unsupervised low-light image enhancement using bright channel prior, IEEE Signal Processing Letters 2010.
+
+#### two-tone distribution
+- [Deblurring] L0 -regularized intensity and gradient prior for deblurring text images and beyond, TPAMI 2016.
+
+#### two-color prior
+- [Deblurring&Denoising] Image deblurring and denoising using color priors, CVPR 2009.
+
+#### histogram equalization prior
+- [Survey] Histogram equalization variants as optimization problems: a review, Archives of Computational Methods in Engineering 2021.
+- [Image-enhancement] Underwater image enhancement with global--local networks and compressed-histogram equalization, Signal Processing: Image Communication 2020.
 
 ### 1.2.2 Statistical Gradient Feature
+
+#### local maximum gradient prior
+- [Deblurring] Blind image deblurring with local maximum gradient prior, CVPR 2019.
+  
+#### gradient guidance prior
+- [SR] Image super-resolution using gradient profile prior, CVPR 2008.
+- [SR] Structure-preserving super resolution with gradient guidance, CVPR 2020.
+
+#### gradient channel prior
+- [Dehazing] Single image dehazing using gradient channel prior, Applied Intelligence 2019.
+- [Dehazing] Color image dehazing using gradient channel prior and guided l0 filter, Information Sciences 2020.
+
+
 
 ## 1.3 Temporal Prior
 
