@@ -102,23 +102,23 @@ CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super 
 **Definition:** Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
 
 #### dark channels prior
-**[Deblurring]** Blind image deblurring using dark channel prior, CVPR 2016.
-**[Dehazing]** Single image haze removal using dark channel prior, IEEE TPAMI 2010.
+- **[Deblurring]** Blind image deblurring using dark channel prior, CVPR 2016.
+- **[Dehazing]** Single image haze removal using dark channel prior, IEEE TPAMI 2010.
 
 #### bright channels prior
-- [Deblurring] Image deblurring via extreme channels prior, CVPR 2017.
-- [Low-light] Low-light image enhancement using CNN and bright channel prior, ICPC 2017.
-- [Low-light] Unsupervised low-light image enhancement using bright channel prior, IEEE Signal Processing Letters 2010.
+- **[Deblurring]** Image deblurring via extreme channels prior, CVPR 2017.
+- **[Low-light]** Low-light image enhancement using CNN and bright channel prior, ICPC 2017.
+- **[Low-light]** Unsupervised low-light image enhancement using bright channel prior, IEEE Signal Processing Letters 2010.
 
 #### two-tone distribution
-- [Deblurring] L0 -regularized intensity and gradient prior for deblurring text images and beyond, TPAMI 2016.
+- **[Deblurring]** L0 -regularized intensity and gradient prior for deblurring text images and beyond, TPAMI 2016.
 
 #### two-color prior
-- [Deblurring&Denoising] Image deblurring and denoising using color priors, CVPR 2009.
+- **[Deblurring&Denoising]** Image deblurring and denoising using color priors, CVPR 2009.
 
 #### histogram equalization prior
-- [Survey] Histogram equalization variants as optimization problems: a review, Archives of Computational Methods in Engineering 2021.
-- [Image-enhancement] Underwater image enhancement with global--local networks and compressed-histogram equalization, Signal Processing: Image Communication 2020.
+- **[Survey]** Histogram equalization variants as optimization problems: a review, Archives of Computational Methods in Engineering 2021.
+- **[Image-enhancement]** Underwater image enhancement with global--local networks and compressed-histogram equalization, Signal Processing: Image Communication 2020.
 
 ### 1.2.2 Statistical Gradient Feature
 
