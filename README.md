@@ -62,8 +62,9 @@
 ## 1.2 Image Statistical Features as Prior
 **Definition:** Statistical image features can be divided into two categories, the statistical intensity features and the statistical gradient features.
 
+<h2>Representative work</h2>
 
-**Representative application of statistical features in image/video restoration and enhancement tasks**
+Representative application of statistical features in image/video restoration and enhancement tasks
 |Publication|Title|Task|Statistical Features|Highlight|
 |-|-|-|-|-|
 PAMI 2016|L0 -regularized intensity and gradient prior for deblurring text images and beyond|Text deblurring|Two-tone distribution| $L_0$ regularization; Two-tone distribution 
@@ -81,38 +82,38 @@ CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super 
 
 ---
 #### dark channels prior
-**[Deblurring]** Blind image deblurring using dark channel prior, CVPR 2016.</br>
-**[Dehazing]** Single image haze removal using dark channel prior, IEEE TPAMI 2010.</br>
+[Deblurring] Blind image deblurring using dark channel prior, CVPR 2016.</br>
+[Dehazing] Single image haze removal using dark channel prior, IEEE TPAMI 2010.</br>
 
 #### bright channels prior
-**[Deblurring]** Image deblurring via extreme channels prior, CVPR 2017.</br>
-**[Low-light]** Low-light image enhancement using CNN and bright channel prior, ICPC 2017.</br>
-**[Low-light]** Unsupervised low-light image enhancement using bright channel prior, IEEE Signal Processing Letters 2010.</br>
+[Deblurring] Image deblurring via extreme channels prior, CVPR 2017.</br>
+[Low-light] Low-light image enhancement using CNN and bright channel prior, ICPC 2017.</br>
+[Low-light] Unsupervised low-light image enhancement using bright channel prior, IEEE Signal Processing Letters 2010.</br>
 
 #### two-tone distribution
-**[Deblurring]** L0 -regularized intensity and gradient prior for deblurring text images and beyond, TPAMI 2016.
+[Deblurring] L0 -regularized intensity and gradient prior for deblurring text images and beyond, TPAMI 2016.
 
 #### two-color prior
-**[Deblurring&Denoising]** Image deblurring and denoising using color priors, CVPR 2009.</br>
+[Deblurring&Denoising] Image deblurring and denoising using color priors, CVPR 2009.</br>
 
 #### histogram equalization prior
-**[Survey]** Histogram equalization variants as optimization problems: a review, Archives of Computational Methods in Engineering 2021. </br>
-**[Image-enhancement]** Underwater image enhancement with global--local networks and compressed-histogram equalization, Signal Processing: Image Communication 2020.</br>
+[Survey] Histogram equalization variants as optimization problems: a review, Archives of Computational Methods in Engineering 2021. </br>
+[Image-enhancement] Underwater image enhancement with global--local networks and compressed-histogram equalization, Signal Processing: Image Communication 2020.</br>
 
 ### 1.2.2 Statistical Gradient Feature
 **Definition:** Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
 
 ---
 #### local maximum gradient prior
-**[Deblurring]** Blind image deblurring with local maximum gradient prior, CVPR 2019.
+[Deblurring] Blind image deblurring with local maximum gradient prior, CVPR 2019.
   
 #### gradient guidance prior
-**[SR]** Image super-resolution using gradient profile prior, CVPR 2008.</br>
-**[SR]** Structure-preserving super resolution with gradient guidance, CVPR 2020.</br>
+[SR] Image super-resolution using gradient profile prior, CVPR 2008.</br>
+[SR] Structure-preserving super resolution with gradient guidance, CVPR 2020.</br>
 
 #### gradient channel prior
-**[Dehazing]** Single image dehazing using gradient channel prior, Applied Intelligence 2019.</br>
-**[Dehazing]** Color image dehazing using gradient channel prior and guided l0 filter, Information Sciences 2020.</br>
+[Dehazing] Single image dehazing using gradient channel prior, Applied Intelligence 2019.</br>
+[Dehazing] Color image dehazing using gradient channel prior and guided l0 filter, Information Sciences 2020.</br>
 
 
 
