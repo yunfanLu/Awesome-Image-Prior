@@ -17,8 +17,6 @@
 
 <h2>Table of contents</h2>
 
-- [Image Enhancement Classification](#image-enhancement-classification)
-- [Prior Classification](#prior-classification)
 - [1.Ruled Prior](#1ruled-prior)
   - [1.1 High-Level Semantic Information as Prior](#11-high-level-semantic-information-as-prior)
   - [1.2 Image Statistical Features as Prior](#12-image-statistical-features-as-prior)
@@ -33,38 +31,57 @@
   - [2.3 Deep Image Prior](#23-deep-image-prior)
   - [2.4 Pre-trained Model as Prior](#24-pre-trained-model-as-prior)
 
-# Image Enhancement Classification
-
-# Prior Classification
-
-
 # 1.Ruled Prior
 
 ## 1.1 High-Level Semantic Information as Prior
+The high-level information refers to using semantic segmentation or object detection information as priors to guide image restoration and enhancement.
 
-**Definition:**
+<h2>Representative work</h2>
 
-|Conference|Title|Task|
-| ---- | :----------------------------------------------------------- | ---------- |
-| TIP 2018 | Deep video dehazing with semantic segmentation              | Video Dehazing |
-| CVPR 2018 | Deep semantic face deblurring | Human Face Deblur |
-| CVPR 2018 | Recovering realistic texture in image super-resolution by deep spatial feature transform | Super-Resolution |
-| CVPR 2018 | High-resolution image synthesis and semantic manipulation with conditional gans | Super-Resolution |
-| CVPR 2019 | Human-aware motion deblurring | Human Motion Deblur |
-| ICCV 2019 | Srobb: Targeted perceptual loss for single image superresolution | Super-Resolution |
-| CVPR 2020 | Dual super-resolution learning for semantic segmentation | Super-Resolution |
-| ACM-MM 2020 | Integrating semantic segmentation and retinex model for low-light image enhancement | Low-light; Denoise |
-| CVPR 2021 | Progressive semantic-aware style transformation for blind face restoration | Human Face Restoration |
-| ICCV 2021 | Spatiallyadaptive image restoration using distortion-guided networks | Image Restoration |
-| ACM-MM 2022 | Close the loop: A unified bottomup and top-down paradigm for joint image deraining and segmentation | Deraining |
-| WACV 2022 | Sapnet: Segmentation-aware progressive network for perceptual contrastive deraining | Deraining |
+|Publication|Title|Task|Statistical Prior|Highlight|
+|-|-|-|-|-|
+|[TIP 2018](https://ieeexplore.ieee.org/abstract/document/8492451?casa_token=uv8Cdpbgn4wAAAAA:aAyXn6-5v7orDxILciKbgBJKz6nQSPzMwF-z1Ptgh-ndm8i4INcpzqftgbdfaG4B87wc6ySadg)|Deep video dehazing with semantic segmentation| Video Dehazing    | Semantic  | Video     
+|[CVPR 2018](https://openaccess.thecvf.com/content_cvpr_2018/html/Shen_Deep_Semantic_Face_CVPR_2018_paper.html)|Deep semantic face deblurring| Face deblur| Semantic  | Perceptual and adversarial losses 
+|CVPR 2018|Fsrnet: End-to-end learning face super-resolution with facial priors| Face Super-Resolution     | Face landmark     | First work, Face landmark heatmaps 
+|CVPR 2018|Recovering realistic texture in image super-resolution by deep spatial feature transform| Super-Resolution  | Semantic  | Textures recover 
+|CVPR 2018|High-resolution image synthesis and semantic manipulation with conditional gans| Super Resolution  | Semantic  | GAN-based 
+|CVPR 2019|Human-aware motion deblurring| Human Motion Deblur| Semantic  | Disentangles the humans and background 
+|ICCV 2019|Srobb: Targeted perceptual loss for single image super-resolution| Super resolution  | Semantic  | Object, Background and Boundary 
+|CVPR 2020|Dual super-resolution learning for semantic segmentation| Super-Resolution  | Semantic  | Two-stream framework   
+|ACM-MM 2020     |Integrating semantic segmentation and retinex model for low-light image enhancement| Low-light; Denoise| Semantic  | First work 
+|TIP 2020|Connecting image denoising and high-level vision tasks via deep learning| Denoise   | Semantic  | First work  
+|CVPR 2021|Progressive semantic-aware style transformation for blind face restoration| Human face restoration    | Semantic  | Semantic-aware style Transformation 
+|ICCV 2021|Spatially-adaptive image restoration using distortion-guided networks| Image Restoration | Semantic  | *
+|ACM-MM 2022 |Close the Loop: A Unified Bottom-up and Top-down Paradigm for Joint Image Deraining and Segmentation| Deraining | Semantic  | Bottom-up and Top-down Paradigm 
+
+---
+
+![](img/14-high-level-guide.jpg)
+
+**(a)** the semantic output as the input for the image restoration and enhancement model. 
+
+- [Face-restoration] Towards real-world blind face restoration with generative facial prior, CVPR 2021.
+- [Face-deblurring] Deep semantic face deblurring, CVPR 2018.
+
+**(b)** the restoration and enhancement and the semantic model shell one backbone and training together. 
+
+- [Denoising] Connecting image denoising and high-level vision tasks via deep learning, TIP 2020.
+
+**(c)** enhancement and segmentation tasks are alternatively performed and collaborated with each other
+
+- [Deraining] Close the Loop: A Unified Bottom-up and Top-down Paradigm for Joint Image Deraining and Segmentation, 2022.
+
+---
+
+- [Survey] Deep semantic segmentation of natural and medical images: a review, Artificial Intelligence Review 2021.
+- [Survey] Deep learning for generic object detection: A survey, IJCV 2020.
+- [Face-restoration] Learning warped guidance for blind face restoration, ECCV 2018.
 
 ## 1.2 Image Statistical Features as Prior
 Statistical image features can be divided into two categories, the statistical intensity features and the statistical gradient features.
 
 <h2>Representative work</h2>
 
-Representative application of statistical features in image/video restoration and enhancement tasks
 |Publication|Title|Task|Statistical Features|Highlight|
 |-|-|-|-|-|
 [PAMI 2016](https://openreview.net/pdf?id=IucGD5fQBV)|L0 -regularized intensity and gradient prior for deblurring text images and beyond|Text deblurring|Two-tone distribution| $L_0$ regularization; Two-tone distribution 
@@ -188,8 +205,33 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 - [Video-frame-interpolation] Memc-net: Motion estimation and motion compensation driven neural network for video interpolation and enhancement, TPAMI 2019.
 
 ### 1.3.2 Temporal Sharpness Prior
+Temporal sharpness prior is a specific prior in video deblurring based on the hypothesis of blur inconsecutive property.
+
+- [Video-deblurring] Video deblurring for hand-held cameras using patch-based synthesis, ACM TOG 2012.
+- [Video-deblurring] Cascaded deep video deblurring using temporal sharpness prior, CVPR 2020.
+- [Video-deblurring] Bringing events into video deblurring with non-consecutively blurry frames, ICCV 2021.
+- [Video-deblurring] Arvo: Learning all-range volumetric correspondence for video deblurring, CVPR 2021.
 
 ## 1.4 Transformation as Prior
+Transforming image to different domain can bring favorable properties for network training e.g., some noise pattern are more apparent in certain frequency sub-bands.
+
+<h2>Representative work</h2>
+
+|Publication|Title|Task|Transformation Types|Highlight|
+|-|-|-|-|-|
+CVPRW 2017 | Beyond deep residual learning for image restoration: Persistent homology-guided manifold simplification | SR;Denoising | Wavelet | Use as input and output in CNN |
+CVPRW 2017 | Deep wavelet prediction for image super-resolution | SR | Wavelet | Use as input and output in CNN |
+CVPRW 2018 | Multi-level wavelet-CNN for image restoration | SR;Denoising;Compression| Wavelet | Apply on feature map in CNN |
+ICCV 2017 | Wavelet-srnet: A wavelet-based cnn for multi-scale face super resolution | SR | Wavelet | Use as input and output in CNN|
+TIP 2019 | Scale-free single image deraining via visibility-enhanced recurrent wavelet learning | Deraning | Wavelet | Use as input and output in CNN|
+ICCV 2019 | Wavelet domain style transfer for an effective perception-distortion tradeoff in single image super-resolution | SR | Wavelet | Use as input and output in CNN |
+ECCV 2020 | Wavelet-based dual-branch network for image demoiring | Demoireing;Deraining | Wavelet | Use input and output in CNN |
+ECCV 2020 | Burst Denoising via Temporally Shifted Wavelet Transforms | Denoising | Wavelet | Apply on feature map in CNN |
+CVPRW 2021 | DW-GAN: A Discrete Wavelet Transform GAN for NonHomogeneous Dehazing | Dehazing | Wavelet | Apply on feature map in GAN |
+CVPR 2021 | Invertible denoising network: A light solution for real noise removal | Denoising | Wavelet | Use as input and output in invertible network|
+CVPR 2021 | Efficient multi-stage video denoising with recurrent spatio-temporal fusion | Denoising | Customized Wavelet | Use as input and output in CNN |
+ICCV 2021 | Fourier space losses for efficient perceptual image super-resolution | SR | Fourier | Use as input and output in GAN |
+ICCV 2021 | ALL Snow Removed: Single Image Desnowing Algorithm Using Hierarchical Dual-Tree Complex Wavelet Representation and Contradict Channel Loss | Desnowing | Wavelet | Use as input and output in CNN |
 
 ### 1.4.1 Learning with Frequency Information
 
