@@ -99,7 +99,6 @@ CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super 
 ### 1.2.1 Statistical Intensity Features
 Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
 
----
 #### dark channels prior
 - [Deblurring] Blind image deblurring using dark channel prior, CVPR 2016.
 - [Dehazing] Single image haze removal using dark channel prior, IEEE TPAMI 2010.
@@ -124,7 +123,6 @@ Statistical features of high-quality image intensity have strong sparsity, which
 ### 1.2.2 Statistical Gradient Feature
 Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
 
----
 #### local maximum gradient prior
 - [Deblurring] Blind image deblurring with local maximum gradient prior, CVPR 2019.
   
@@ -219,13 +217,13 @@ Transforming image to different domain can bring favorable properties for networ
 
 |Publication|Title|Task|Transformation Types|Highlight|
 |-|-|-|-|-|
-CVPRW 2017 | Beyond deep residual learning for image restoration: Persistent homology-guided manifold simplification | SR;Denoising | Wavelet | Use as input and output in CNN |
+CVPRW 2017 | Beyond deep residual learning for image restoration: Persistent homology-guided manifold simplification | SR</br>Denoising | Wavelet | Use as input and output in CNN |
 CVPRW 2017 | Deep wavelet prediction for image super-resolution | SR | Wavelet | Use as input and output in CNN |
-CVPRW 2018 | Multi-level wavelet-CNN for image restoration | SR;Denoising;Compression| Wavelet | Apply on feature map in CNN |
+CVPRW 2018 | Multi-level wavelet-CNN for image restoration | SR</br>Denoising</br>Compression| Wavelet | Apply on feature map in CNN |
 ICCV 2017 | Wavelet-srnet: A wavelet-based cnn for multi-scale face super resolution | SR | Wavelet | Use as input and output in CNN|
 TIP 2019 | Scale-free single image deraining via visibility-enhanced recurrent wavelet learning | Deraning | Wavelet | Use as input and output in CNN|
 ICCV 2019 | Wavelet domain style transfer for an effective perception-distortion tradeoff in single image super-resolution | SR | Wavelet | Use as input and output in CNN |
-ECCV 2020 | Wavelet-based dual-branch network for image demoiring | Demoireing;Deraining | Wavelet | Use input and output in CNN |
+ECCV 2020 | Wavelet-based dual-branch network for image demoiring | Demoireing</br>Deraining | Wavelet | Use input and output in CNN |
 ECCV 2020 | Burst Denoising via Temporally Shifted Wavelet Transforms | Denoising | Wavelet | Apply on feature map in CNN |
 CVPRW 2021 | DW-GAN: A Discrete Wavelet Transform GAN for NonHomogeneous Dehazing | Dehazing | Wavelet | Apply on feature map in GAN |
 CVPR 2021 | Invertible denoising network: A light solution for real noise removal | Denoising | Wavelet | Use as input and output in invertible network|
@@ -233,11 +231,66 @@ CVPR 2021 | Efficient multi-stage video denoising with recurrent spatio-temporal
 ICCV 2021 | Fourier space losses for efficient perceptual image super-resolution | SR | Fourier | Use as input and output in GAN |
 ICCV 2021 | ALL Snow Removed: Single Image Desnowing Algorithm Using Hierarchical Dual-Tree Complex Wavelet Representation and Contradict Channel Loss | Desnowing | Wavelet | Use as input and output in CNN |
 
+---
 ### 1.4.1 Learning with Frequency Information
+- [Theory] A theory for multiresolution signal decomposition: the wavelet representation, TPAMI 1989.
+- [Image-restoration] An EM algorithm for wavelet-based image restoration, TIP 2003.
+- [Image-restoration] Beyond deep residual learning for image restoration: Persistent homology-guided manifold simplification, CVPRW 2017.
+- [Demoiring] Wavelet-based dual-branch network for image demoiring, ECCV 2020.
+- [Deraining] Scale-free single image deraining via visibility-enhanced recurrent wavelet learning, TIP 2019.
+- [Dehazing] DW-GAN: A Discrete Wavelet Transform GAN for NonHomogeneous Dehazing, CVPRW 2021.
+- [Desnowing] ALL Snow Removed: Single Image Desnowing Algorithm Using Hierarchical Dual-Tree Complex Wavelet Representation and Contradict Channel Loss, ICCV 2021.
+- [Super-resolution] Deep wavelet prediction for image super-resolution, CVPRW 2017.
+- [Super-resolution] Wavelet-srnet: A wavelet-based cnn for multi-scale face super resolution, ICCV 2017.
+- [Super-resolution] Wavelet domain style transfer for an effective perception-distortion tradeoff in single image super-resolution, ICCV 2019.
+- [Denoising] Invertible denoising network: A light solution for real noise removal, CVPR 2021.
+- [Denoising] Efficient multi-stage video denoising with recurrent spatio-temporal fusion, CVPR 2021.
+- [Super-resolution] Fourier space losses for efficient perceptual image super-resolution, ICCV 2021.
+- [Image-restoration] Multi-level wavelet-CNN for image restoration, CVPRW 2018.
+- [Denoising] Burst Denoising via Temporally Shifted Wavelet Transforms, ECCV 2020.
 
 ### 1.4.2 Other Transformation
+- [Super-resolution] Deep edge guided recurrent residual learning for image super-resolution, TIP 2017.
+- [Super-resolution] Edge-informed single image super-resolution, ICCVW 2019. 
+- [Dehazing] Single image dehazing via multi-scale convolutional neural networks with holistic edges, IJCV 2020.
+- [Low-light] Eemefn: Low-light image enhancement via edge-enhanced multi-exposure fusion network, AAAI 2020.
+- [Edge-detection] Holistically-nested edge detection, ICCV 2015.
+- [Super-resolution] Soft-edge assisted network for single image super-resolution, TIP 2020.
+- [Dehazing] Gated fusion network for single image dehazing, CVPR 2018.
+
+
 
 ## 1.5 Physical-based Priors
+Physical model can simplify the learning target compared to the directly output high-quality image.
+
+<h2>Representative work</h2>
+
+|Publication|Title|Task|Physical Prior|Highlight|
+|-|-|-|-|-|
+TIP 2016 | Dehazenet: An end-to-end system for single image haze removal | Dehazing | ASM | Estimate transmission map|
+ECCV 2016 | Single image dehazing via multi-scale convolutional neural networks  | Dehazing | ASM | Estimate transmission map |
+ICCV 2017 | Aod-net: All-in-one dehazing network | Dehazing | ASM | Estimate an intermediate parameter by reformulated ASM |
+CVPR 2018 | Densely connected pyramid dehazing network| Dehazing | ASM | Jointly estimate transmission map and atmospheric light|
+IJCAI 2018 | DehazeGAN: When Image Dehazing Meets Differential Programming. | Dehazing | ASM | Estimate an intermediate parameter by reformulated ASM |
+TIP 2019 | FAMED-Net: A fast and accurate multi-scale end-to-end dehazing network | Dehazing | ASM | Estimate an intermediate parameter by reformulated ASM |
+ECCV 2020 | Physics-based feature dehazing networks | Dehazing | ASM | Jointly estimate transmission map and atmospheric light|
+ECCV 2020 | BidNet: Binocular image dehazing without explicit disparity estimation | Dehazing | ASM | Jointly estimate transmission map and atmospheric light|
+ECCV 2020 | JSTASR: Joint size and transparency-aware snow removal algorithm based on modified partial convolution and veiling effect removal | Desnowing | ASM | Jointly estimate transmission map and atmospheric light |
+CVPR 2021 | Zero-Shot Single Image Restoration Through Controlled Perturbation of Koschmieder's Model | Dehazing</br>Underwater</br>Low-light | ASM |  Jointly estimate transmission map and atmospheric light |
+CVPR 2017 | Removing rain from single images via a deep detail network | Deraining | Rain Model | Residual learning |
+CVPR 2017 | Deep edge guided recurrent residual learning for image super-resolution  | Deraining | Rain Model | Recurrent Residual learning with multiple steak layer and rain mask|
+CVPR 2018 | Density-aware single image de-raining using a multi-stream dense network | Deraining | Rain Model | Residual learning with rain-density classifier|
+ECCV 2018 | Recurrent squeeze-and-excitation context aggregation net for single image deraining | Deraining | Rain Model | Recurrent Residual learning with multiple steak layer|
+CVPR 2018 | Erase or fill? deep joint recurrent rain removal and reconstruction in videos  | Video Deraining | Rain Model | Residual learning considering occlusion|
+CVPR 2019 | Depth-attentional features for single-image rain removal | Deraining | Rain Model | Residual learning with depth information guidance |
+CVPR 2019 | Frame-consistent recurrent video deraining with dual-level flow  | Video Deraining | Rain Model | Residual learning with temporal fusion |
+BMVC 2018 | Deep Retinex Decomposition for Low-Light Enhancement |  Low-light | Retinex Model | Estimate reflectance and illumination |
+PRL 2018 | LightenNet: A convolutional neural network for weakly illuminated image enhancement |  Low-light | Retinex Model | Estimate illumination|
+ACM MM 2019 | Kindling the darkness: A practical low-light image enhancer |  Low-light | Retinex Model | Estimate reflectance and illumination |
+ACM MM 2019 | Progressive retinex: Mutually reinforced illumination-noise perception network for low-light image enhancement |  Low-light | Retinex Model | Estimate illumination |
+IJCV 2021 | Beyond brightening low-light images |  Low-light | Retinex Model | Estimate reflectance and illumination |
+TIP 2021 | Sparse gradient regularized deep retinex network for robust low-light image enhancement |  Low-light | Retinex Model | Estimate reflectance and illumination|
+CVPR 2021 | Retinex-inspired unrolling with cooperative prior architecture search for low-light image enhancement |  Low-light | Retinex Model | Estimate illumination|
 
 ### 1.5.1 Atmospheric Scattering Model
 
@@ -246,16 +299,39 @@ ICCV 2021 | ALL Snow Removed: Single Image Desnowing Algorithm Using Hierarchica
 ### 1.5.3 Retinex Model
 
 ## 1.6 Explicit Modelling Kernel and Noise Information as Prior
+Modeling kernel and noise information can provide extra information and perform image-specific restoration.
+
+<h2>Representative work</h2>
+
+|Publication|Title|Task|Highlight|
+|-|-|-|-|-|
+CVPR 2018 | Learning a single convolutional super-resolution network for multiple degradations  | SR | Kernel for conditional input |
+TIP 2018 | FFDNet: Toward a fast and flexible solution for CNN-based image denoising  | Denoising | Noise for conditional input |
+CVPR 2019| Deep plug-and-play super-resolution for arbitrary blur kernels  | SR | Kernel for conditional input |
+NeurIPS 2019 | Blind super-resolution kernel estimation using an internal-gan | SR | Estimate kernel |
+CVPR 2019 | Blind super-resolution with iterative kernel correction  | SR | Jointly estimate and conditional</br>input kernel information|
+CVPR 2019 | Toward convolutional blind denoising of real photographs  | Denoising | Jointly estimate and conditional </br> input noise information |
+CVPR 2020 | Unified dynamic convolutional network for super-resolution with variational degradations | SR |  Kernel for conditional input |
+NeurIPS 2020 | Unfolding the alternating optimization for blind super resolution  | SR | Jointly estimate and conditional </br> input kernel information |
+CVPR 2021 | Flow-based kernel prior with application to blind super-resolution  | SR |  Estimate kernel |
+CVPR 2018 | Image blind denoising with generative adversarial network based noise modeling | Denoising | Synthetic noise modeling |
+ICCV 2019 | Kernel modeling super-resolution on real low-resolution images  | SR | Synthetic kernel modeling   |
+CVPRW 2020 |Real-world super-resolution via kernel estimation and noise injection | SR | Synthetic kernel modeling |
+CVPR 2021 | Explore image deblurring via encoded blur kernel space  | Deblur |  Synthetic kernel modeling  |
+ICCV 2021 | C2N: Practical Generative Noise Modeling for Real-World Denoising | Denoising | Synthetic noise modeling |
 
 ### 1.6.1 Explicit Modelling in Modular Design
 
 ### 1.6.2 Explicit Modelling in Training Set Synthetic
 
 ## 1.7 Data Degradation as Prior
-
 ### 1.7.1 Motion Blur Model
 
+nah2017deep,nah2019ntire,nah2021ntire,paliwal2020deep
+
+
 ### 1.7.2 Compression Information as Prior
+
 
 # 2. Latent Prior
 
