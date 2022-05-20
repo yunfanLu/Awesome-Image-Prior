@@ -304,7 +304,7 @@ Modeling kernel and noise information can provide extra information and perform 
 <h2>Representative work</h2>
 
 |Publication|Title|Task|Highlight|
-|-|-|-|-|-|
+|-|-|-|-|
 |CVPR 2018 | Learning a single convolutional super-resolution network for multiple degradations  | SR | Kernel for conditional input |
 |TIP 2018 | FFDNet: Toward a fast and flexible solution for CNN-based image denoising  | Denoising | Noise for conditional input |
 |CVPR 2019| Deep plug-and-play super-resolution for arbitrary blur kernels  | SR | Kernel for conditional input |
