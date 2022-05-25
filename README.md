@@ -18,13 +18,12 @@
 <h2>Table of contents</h2>
 
 - [1.Ruled Prior](#1ruled-prior)
-  - [1.1 High-Level Semantic Information as Prior](#11-high-level-semantic-information-as-prior)
-  - [1.2 Image Statistical Features as Prior](#12-image-statistical-features-as-prior)
-  - [1.3 Temporal Prior](#13-temporal-prior)
-  - [1.4 Transformation as Prior](#14-transformation-as-prior)
-  - [1.5 Physical-based Priors](#15-physical-based-priors)
-  - [1.6 Explicit Modelling Kernel and Noise Information as Prior](#16-explicit-modelling-kernel-and-noise-information-as-prior)
-  - [1.7 Data Degradation as Prior](#17-data-degradation-as-prior)
+  - [1.1 Image Statistical Features as Prior](#11-image-statistical-features-as-prior)
+  - [1.2 Temporal Prior](#12-temporal-prior)
+  - [1.3 Transformation as Prior](#13-transformation-as-prior)
+  - [1.4 Physical-based Priors](#14-physical-based-priors)
+  - [1.5 Explicit Modelling Kernel and Noise Information as Prior](#15-explicit-modelling-kernel-and-noise-information-as-prior)
+  - [1.6 High-Level Semantic Information as Prior](#16-high-level-semantic-information-as-prior)
 - [2. Latent Prior](#2-latent-prior)
   - [2.1 Non-local Self-similarity](#21-non-local-self-similarity)
   - [2.2 Facial Prior](#22-facial-prior)
@@ -32,52 +31,7 @@
   - [2.4 Pre-trained Model as Prior](#24-pre-trained-model-as-prior)
 
 # 1.Ruled Prior
-
-## 1.1 High-Level Semantic Information as Prior
-The high-level information refers to using semantic segmentation or object detection information as priors to guide image restoration and enhancement.
-
-<h2>Representative work</h2>
-
-|Publication|Title|Task|Statistical Prior|Highlight|
-|-|-|-|-|-|
-|[TIP 2018](https://ieeexplore.ieee.org/abstract/document/8492451?casa_token=uv8Cdpbgn4wAAAAA:aAyXn6-5v7orDxILciKbgBJKz6nQSPzMwF-z1Ptgh-ndm8i4INcpzqftgbdfaG4B87wc6ySadg)|Deep video dehazing with semantic segmentation| Video Dehazing    | Semantic  | Video     
-|[CVPR 2018](https://openaccess.thecvf.com/content_cvpr_2018/html/Shen_Deep_Semantic_Face_CVPR_2018_paper.html)|Deep semantic face deblurring| Face deblur| Semantic  | Perceptual and adversarial losses 
-|CVPR 2018|Fsrnet: End-to-end learning face super-resolution with facial priors| Face Super-Resolution     | Face landmark     | First work, Face landmark heatmaps 
-|CVPR 2018|Recovering realistic texture in image super-resolution by deep spatial feature transform| Super-Resolution  | Semantic  | Textures recover 
-|CVPR 2018|High-resolution image synthesis and semantic manipulation with conditional gans| Super Resolution  | Semantic  | GAN-based 
-|CVPR 2019|Human-aware motion deblurring| Human Motion Deblur| Semantic  | Disentangles the humans and background 
-|ICCV 2019|Srobb: Targeted perceptual loss for single image super-resolution| Super resolution  | Semantic  | Object, Background and Boundary 
-|CVPR 2020|Dual super-resolution learning for semantic segmentation| Super-Resolution  | Semantic  | Two-stream framework   
-|ACM-MM 2020     |Integrating semantic segmentation and retinex model for low-light image enhancement| Low-light; Denoise| Semantic  | First work 
-|TIP 2020|Connecting image denoising and high-level vision tasks via deep learning| Denoise   | Semantic  | First work  
-|CVPR 2021|Progressive semantic-aware style transformation for blind face restoration| Human face restoration    | Semantic  | Semantic-aware style Transformation 
-|ICCV 2021|Spatially-adaptive image restoration using distortion-guided networks| Image Restoration | Semantic  | *
-|ACM-MM 2022 |Close the Loop: A Unified Bottom-up and Top-down Paradigm for Joint Image Deraining and Segmentation| Deraining | Semantic  | Bottom-up and Top-down Paradigm 
-
----
-
-![](img/14-high-level-guide.jpg)
-
-**(a)** the semantic output as the input for the image restoration and enhancement model. 
-
-- [Face-restoration] Towards real-world blind face restoration with generative facial prior, CVPR 2021.
-- [Face-deblurring] Deep semantic face deblurring, CVPR 2018.
-
-**(b)** the restoration and enhancement and the semantic model shell one backbone and training together. 
-
-- [Denoising] Connecting image denoising and high-level vision tasks via deep learning, TIP 2020.
-
-**(c)** enhancement and segmentation tasks are alternatively performed and collaborated with each other
-
-- [Deraining] Close the Loop: A Unified Bottom-up and Top-down Paradigm for Joint Image Deraining and Segmentation, 2022.
-
----
-
-- [Survey] Deep semantic segmentation of natural and medical images: a review, Artificial Intelligence Review 2021.
-- [Survey] Deep learning for generic object detection: A survey, IJCV 2020.
-- [Face-restoration] Learning warped guidance for blind face restoration, ECCV 2018.
-
-## 1.2 Image Statistical Features as Prior
+## 1.1 Image Statistical Features as Prior
 Statistical image features can be divided into two categories, the statistical intensity features and the statistical gradient features.
 
 <h2>Representative work</h2>
@@ -96,7 +50,7 @@ CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super 
 
 ---
 
-### 1.2.1 Statistical Intensity Features
+### 1.1.1 Statistical Intensity Features
 Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
 
 #### dark channels prior
@@ -120,7 +74,7 @@ Statistical features of high-quality image intensity have strong sparsity, which
 
 ---
 
-### 1.2.2 Statistical Gradient Feature
+### 1.1.2 Statistical Gradient Feature
 Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
 
 #### local maximum gradient prior
@@ -137,9 +91,9 @@ Statistical features of high-quality image intensity have strong sparsity, which
 ---
 
 
-## 1.3 Temporal Prior
+## 1.2 Temporal Prior
 Temporal prior is specific in video restoration and enhancement tasks. Unlike the priors in the image, the priors in videos mainly come from temporal information, which is the relationship between frames.
-### 1.3.1 Optical Flow
+### 1.2.1 Optical Flow
 Optical flow is the motion of objects, surfaces, and edges between consecutive frames of sequence caused by the observer and scene.
 
 <h2>Representative work</h2>
@@ -202,7 +156,7 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 - [Video-deraining] Frame-consistent recurrent video deraining with dual-level flow, CVPR 2019.
 - [Video-frame-interpolation] Memc-net: Motion estimation and motion compensation driven neural network for video interpolation and enhancement, TPAMI 2019.
 
-### 1.3.2 Temporal Sharpness Prior
+### 1.2.2 Temporal Sharpness Prior
 Temporal sharpness prior is a specific prior in video deblurring based on the hypothesis of blur inconsecutive property.
 
 - [Video-deblurring] Video deblurring for hand-held cameras using patch-based synthesis, ACM TOG 2012.
@@ -210,7 +164,9 @@ Temporal sharpness prior is a specific prior in video deblurring based on the hy
 - [Video-deblurring] Bringing events into video deblurring with non-consecutively blurry frames, ICCV 2021.
 - [Video-deblurring] Arvo: Learning all-range volumetric correspondence for video deblurring, CVPR 2021.
 
-## 1.4 Transformation as Prior
+---
+
+## 1.3 Transformation as Prior
 Transforming image to different domain can bring favorable properties for network training e.g., some noise pattern are more apparent in certain frequency sub-bands.
 
 <h2>Representative work</h2>
@@ -232,7 +188,7 @@ ICCV 2021 | Fourier space losses for efficient perceptual image super-resolution
 ICCV 2021 | ALL Snow Removed: Single Image Desnowing Algorithm Using Hierarchical Dual-Tree Complex Wavelet Representation and Contradict Channel Loss | Desnowing | Wavelet | Use as input and output in CNN |
 
 ---
-### 1.4.1 Learning with Frequency Information
+### 1.3.1 Learning with Frequency Information
 Transforming data into the frequency domain, such as using Discrete Fourier Transform (DFT) or Discrete Wavelet Transform (DWT), allows data to be decomposed with different frequency sub-bans for component-wise analysis, and has been widely studied for image restoration before deep learning era.
 
 - [Theory] A theory for multiresolution signal decomposition: the wavelet representation, TPAMI 1989.
@@ -251,7 +207,7 @@ Transforming data into the frequency domain, such as using Discrete Fourier Tran
 - [Image-restoration] Multi-level wavelet-CNN for image restoration, CVPRW 2018.
 - [Denoising] Burst Denoising via Temporally Shifted Wavelet Transforms, ECCV 2020.
 
-### 1.4.2 Other Transformation
+### 1.3.2 Other Transformation
 There are also other transformations that can serve as informative prior for image restoration and enhancement tasks by emphasizing some significant patterns of images.
 
 - [Super-resolution] Deep edge guided recurrent residual learning for image super-resolution, TIP 2017.
@@ -262,9 +218,9 @@ There are also other transformations that can serve as informative prior for ima
 - [Super-resolution] Soft-edge assisted network for single image super-resolution, TIP 2020.
 - [Dehazing] Gated fusion network for single image dehazing, CVPR 2018.
 
+---
 
-
-## 1.5 Physical-based Priors
+## 1.4 Physical-based Priors
 Physical model can simplify the learning target compared to the directly output high-quality image.
 
 <h2>Representative work</h2>
@@ -296,7 +252,7 @@ IJCV 2021 | Beyond brightening low-light images |  Low-light | Retinex Model | E
 TIP 2021 | Sparse gradient regularized deep retinex network for robust low-light image enhancement |  Low-light | Retinex Model | Estimate reflectance and illumination|
 CVPR 2021 | Retinex-inspired unrolling with cooperative prior architecture search for low-light image enhancement |  Low-light | Retinex Model | Estimate illumination|
 
-### 1.5.1 Atmospheric Scattering Model
+### 1.4.1 Atmospheric Scattering Model
 - [Theory] Vision in bad weather, ICCV 1999.
 - [Theory] Contrast restoration of weather degraded images, TPAMI 2003.
 - [Dehazing] Dehazenet: An end-to-end system for single image haze removal, TIP 2016.
@@ -308,7 +264,7 @@ CVPR 2021 | Retinex-inspired unrolling with cooperative prior architecture searc
 - [Desnowing] JSTASR: Joint size and transparency-aware snow removal algorithm based on modified partial convolution and veiling effect removal, ECCV 2020.
 - [Restoration] Zero-Shot Single Image Restoration Through Controlled Perturbation of Koschmieder's Model, CVPR 2021.
 
-### 1.5.2 Rain Model
+### 1.4.2 Rain Model
 - [Deraining] Rain streak removal using layer priors, CVPR 2016.
 - [Deraining] Removing rain from single images via a deep detail network, CVPR 2017.
 - [Deraining] Density-aware single image de-raining using a multi-stream dense network, CVPR 2018.
@@ -317,7 +273,7 @@ CVPR 2021 | Retinex-inspired unrolling with cooperative prior architecture searc
 - [Deraining] Frame-consistent recurrent video deraining with dual-level flow, CVPR 2019.
 - [Deraining] Depth-attentional features for single-image rain removal, CVPR 2019.
 
-### 1.5.3 Retinex Model
+### 1.4.3 Retinex Model
 - [Theory] An alternative technique for the computation of the designator in the retinex theory of color vision,1986.
 - [Low-Light] Deep Retinex Decomposition for Low-Light Enhancement, BMVC 2018.
 - [Low-Light] Kindling the darkness: A practical low-light image enhancer, ACM-MM 2019.
@@ -327,7 +283,9 @@ CVPR 2021 | Retinex-inspired unrolling with cooperative prior architecture searc
 - [Low-Light] Progressive retinex: Mutually reinforced illumination-noise perception network for low-light image enhancement, ACM-MM 2019.
 - [Low-Light] Retinex-inspired unrolling with cooperative prior architecture search for low-light image enhancement, CVPR 2021.
 
-## 1.6 Explicit Modelling Kernel and Noise Information as Prior
+---
+
+## 1.5 Explicit Modelling Kernel and Noise Information as Prior
 Modeling kernel and noise information can provide extra information and perform image-specific restoration.
 
 <h2>Representative work</h2>
@@ -349,7 +307,7 @@ Modeling kernel and noise information can provide extra information and perform 
 |CVPR 2021 | Explore image deblurring via encoded blur kernel space  | Deblur |  Synthetic kernel modeling  |
 |ICCV 2021 | C2N: Practical Generative Noise Modeling for Real-World Denoising | Denoising | Synthetic noise modeling |
 
-### 1.6.1 Explicit Modelling in Modular Design
+### 1.5.1 Explicit Modelling in Modular Design
 - [Super-resolution] Learning a single convolutional super-resolution network for multiple degradations, CVPR 2018.
 - [Super-resolution] Unified dynamic convolutional network for super-resolution with variational degradations, CVPR 2020.
 - [Super-resolution] Deep plug-and-play super-resolution for arbitrary blur kernels, CVPR 2019.
@@ -362,7 +320,7 @@ Modeling kernel and noise information can provide extra information and perform 
 - [Super-resolution] Unfolding the alternating optimization for blind super resolution, NIPS 2020.
 - [Denoising] Toward convolutional blind denoising of real photographs, CVPR 2019.
 
-### 1.6.2 Explicit Modelling in Training Set Synthetic
+### 1.5.2 Explicit Modelling in Training Set Synthetic
 - [Super-resolution] Kernel modeling super-resolution on real low-resolution images, ICCV 2019.
 - [Super-resolution] Real-world super-resolution via kernel estimation and noise injection, CVPRW 2020.
 - [Deblurring] Explore image deblurring via encoded blur kernel space, CVPR 2021.
@@ -371,14 +329,11 @@ Modeling kernel and noise information can provide extra information and perform 
 - [Super-resolution] Unsupervised degradation representation learning for blind super-resolution, CVPR 2021.
 - [Super-resolution] Classsr: A general framework to accelerate super-resolution networks by data characteristic, CVPR 2021.
 
-## 1.7 Data Degradation as Prior
-### 1.7.1 Motion Blur Model
+### 1.5.3 Others
 - [Deblurring] Deep multi-scale convolutional neural network for dynamic scene deblurring, CVPR 2017.
 - [VSR&Video-deblurring] Ntire 2019 challenge on video deblurring and super-resolution: Dataset and study, CVPRW 2019.
 - [Deblurring] NTIRE 2021 challenge on image deblurring, CVPR 2021.
 - [Slow-motion] Deep slow motion video reconstruction with hybrid imaging system, TPAMI 2020.
-
-### 1.7.2 Compression Information as Prior
 - [Compression] Characterizing perceptual artifacts in compressed video streams,Human Vision and Electronic Imaging XIX 2014.
 - [Compression] Deep kalman filtering network for video compression artifact reduction, ECCV 2018.
 - [Compression] Enhancing quality for HEVC compressed videos, IEEE Transactions on Circuits and Systems for Video Technology 2018.
@@ -386,6 +341,54 @@ Modeling kernel and noise information can provide extra information and perform 
 - [Super-resolution] Real-esrgan: Training real-world blind super-resolution with pure synthetic data, ICCV 2021.
 - [VSR] Video enhancement with task-oriented flow, IJCV 2019.
 - [Compression] NTIRE 2021 challenge on quality enhancement of compressed video: Methods and results, CVPR 2021.
+
+---
+
+## 1.6 High-Level Semantic Information as Prior
+The high-level information refers to using semantic segmentation or object detection information as priors to guide image restoration and enhancement.
+
+<h2>Representative work</h2>
+
+|Publication|Title|Task|Statistical Prior|Highlight|
+|-|-|-|-|-|
+|[TIP 2018](https://ieeexplore.ieee.org/abstract/document/8492451?casa_token=uv8Cdpbgn4wAAAAA:aAyXn6-5v7orDxILciKbgBJKz6nQSPzMwF-z1Ptgh-ndm8i4INcpzqftgbdfaG4B87wc6ySadg)|Deep video dehazing with semantic segmentation| Video Dehazing    | Semantic  | Video     
+|[CVPR 2018](https://openaccess.thecvf.com/content_cvpr_2018/html/Shen_Deep_Semantic_Face_CVPR_2018_paper.html)|Deep semantic face deblurring| Face deblur| Semantic  | Perceptual and adversarial losses 
+|CVPR 2018|Fsrnet: End-to-end learning face super-resolution with facial priors| Face Super-Resolution     | Face landmark     | First work, Face landmark heatmaps 
+|CVPR 2018|Recovering realistic texture in image super-resolution by deep spatial feature transform| Super-Resolution  | Semantic  | Textures recover 
+|CVPR 2018|High-resolution image synthesis and semantic manipulation with conditional gans| Super Resolution  | Semantic  | GAN-based 
+|CVPR 2019|Human-aware motion deblurring| Human Motion Deblur| Semantic  | Disentangles the humans and background 
+|ICCV 2019|Srobb: Targeted perceptual loss for single image super-resolution| Super resolution  | Semantic  | Object, Background and Boundary 
+|CVPR 2020|Dual super-resolution learning for semantic segmentation| Super-Resolution  | Semantic  | Two-stream framework   
+|ACM-MM 2020     |Integrating semantic segmentation and retinex model for low-light image enhancement| Low-light; Denoise| Semantic  | First work 
+|TIP 2020|Connecting image denoising and high-level vision tasks via deep learning| Denoise   | Semantic  | First work  
+|CVPR 2021|Progressive semantic-aware style transformation for blind face restoration| Human face restoration    | Semantic  | Semantic-aware style Transformation 
+|ICCV 2021|Spatially-adaptive image restoration using distortion-guided networks| Image Restoration | Semantic  | *
+|ACM-MM 2022 |Close the Loop: A Unified Bottom-up and Top-down Paradigm for Joint Image Deraining and Segmentation| Deraining | Semantic  | Bottom-up and Top-down Paradigm 
+
+---
+
+![](img/14-high-level-guide.jpg)
+
+**(a)** the semantic output as the input for the image restoration and enhancement model. 
+
+- [Face-restoration] Towards real-world blind face restoration with generative facial prior, CVPR 2021.
+- [Face-deblurring] Deep semantic face deblurring, CVPR 2018.
+
+**(b)** the restoration and enhancement and the semantic model shell one backbone and training together. 
+
+- [Denoising] Connecting image denoising and high-level vision tasks via deep learning, TIP 2020.
+
+**(c)** enhancement and segmentation tasks are alternatively performed and collaborated with each other
+
+- [Deraining] Close the Loop: A Unified Bottom-up and Top-down Paradigm for Joint Image Deraining and Segmentation, 2022.
+
+---
+
+- [Survey] Deep semantic segmentation of natural and medical images: a review, Artificial Intelligence Review 2021.
+- [Survey] Deep learning for generic object detection: A survey, IJCV 2020.
+- [Face-restoration] Learning warped guidance for blind face restoration, ECCV 2018.
+
+--- 
 
 # 2. Latent Prior
 
@@ -431,6 +434,8 @@ CVPR 2021|GAN prior embedded network for blind face restoration in the wild |Fac
 WACV 2022|Deep Feature Prior Guided Face Deblurring  |Face Deblur     |Recognition Model     |Deep features of face recognition networks  
 
 ## 2.3 Deep Image Prior
+Features such as the unique geometry and structure of the face and facial components can be utilized to solve deep learning-based facial image enhancement and restoration tasks.
+
 - [Restoration] Deep Image Prior, IJCV 2020.
 - [Theory] Deep decoder: Concise image representations from untrained non-convolutional networks?, arXiv 2018.
 - [Denoising] Noise2Void - Learning Denoising From Single Noisy Images, CVPR 2019.
@@ -452,6 +457,7 @@ WACV 2022|Deep Feature Prior Guided Face Deblurring  |Face Deblur     |Recogniti
 - [Video-Restoration] Deep Video Prior for Video Consistency and Propagation, IEEE TPAMI 2022.
 
 ## 2.4 Pre-trained Model as Prior
+The models pre-trained on other tasks usually contain certain knowledge of high-quality images, which can be used a as regularization or generator for image restoration or enhancement.
 
 ### 2.4.1 GAN Inversion as Prior
 - [Theory] A style-based generator architecture for generative adversarial networks, CVPR 2019.
