@@ -233,6 +233,8 @@ ICCV 2021 | ALL Snow Removed: Single Image Desnowing Algorithm Using Hierarchica
 
 ---
 ### 1.4.1 Learning with Frequency Information
+Transforming data into the frequency domain, such as using Discrete Fourier Transform (DFT) or Discrete Wavelet Transform (DWT), allows data to be decomposed with different frequency sub-bans for component-wise analysis, and has been widely studied for image restoration before deep learning era.
+
 - [Theory] A theory for multiresolution signal decomposition: the wavelet representation, TPAMI 1989.
 - [Image-restoration] An EM algorithm for wavelet-based image restoration, TIP 2003.
 - [Image-restoration] Beyond deep residual learning for image restoration: Persistent homology-guided manifold simplification, CVPRW 2017.
@@ -250,6 +252,8 @@ ICCV 2021 | ALL Snow Removed: Single Image Desnowing Algorithm Using Hierarchica
 - [Denoising] Burst Denoising via Temporally Shifted Wavelet Transforms, ECCV 2020.
 
 ### 1.4.2 Other Transformation
+There are also other transformations that can serve as informative prior for image restoration and enhancement tasks by emphasizing some significant patterns of images.
+
 - [Super-resolution] Deep edge guided recurrent residual learning for image super-resolution, TIP 2017.
 - [Super-resolution] Edge-informed single image super-resolution, ICCVW 2019. 
 - [Dehazing] Single image dehazing via multi-scale convolutional neural networks with holistic edges, IJCV 2020.
@@ -293,10 +297,35 @@ TIP 2021 | Sparse gradient regularized deep retinex network for robust low-light
 CVPR 2021 | Retinex-inspired unrolling with cooperative prior architecture search for low-light image enhancement |  Low-light | Retinex Model | Estimate illumination|
 
 ### 1.5.1 Atmospheric Scattering Model
+- [Theory] Vision in bad weather, ICCV 1999.
+- [Theory] Contrast restoration of weather degraded images, TPAMI 2003.
+- [Dehazing] Dehazenet: An end-to-end system for single image haze removal, TIP 2016.
+- [Dehazing] Densely connected pyramid dehazing network, CVPR 2018.
+- [Dehazing] Aod-net: All-in-one dehazing network, ICCV 2017.
+- [Dehazing] DehazeGAN: When Image Dehazing Meets Differential Programming., IJCAI 2018.
+- [Dehazing] FAMED-Net: A fast and accurate multi-scale end-to-end dehazing network, TIP 2019.
+- [Dehazing] Physics-based feature dehazing networks, ECCV 2020.
+- [Desnowing] JSTASR: Joint size and transparency-aware snow removal algorithm based on modified partial convolution and veiling effect removal, ECCV 2020.
+- [Restoration] Zero-Shot Single Image Restoration Through Controlled Perturbation of Koschmieder's Model, CVPR 2021.
 
 ### 1.5.2 Rain Model
+- [Deraining] Rain streak removal using layer priors, CVPR 2016.
+- [Deraining] Removing rain from single images via a deep detail network, CVPR 2017.
+- [Deraining] Density-aware single image de-raining using a multi-stream dense network, CVPR 2018.
+- [Super-resolution] Deep edge guided recurrent residual learning for image super-resolution, TIP 2017.
+- [Deraining] Erase or fill? deep joint recurrent rain removal and reconstruction in videos, CVPR 2018.
+- [Deraining] Frame-consistent recurrent video deraining with dual-level flow, CVPR 2019.
+- [Deraining] Depth-attentional features for single-image rain removal, CVPR 2019.
 
 ### 1.5.3 Retinex Model
+- [Theory] An alternative technique for the computation of the designator in the retinex theory of color vision,1986.
+- [Low-Light] Deep Retinex Decomposition for Low-Light Enhancement, BMVC 2018.
+- [Low-Light] Kindling the darkness: A practical low-light image enhancer, ACM-MM 2019.
+- [Low-Light] Beyond brightening low-light images, IJCV 2021.
+- [Low-Light] Sparse gradient regularized deep retinex network for robust low-light image enhancement, TIP 2021.
+- [Low-Light] LightenNet: A convolutional neural network for weakly illuminated image enhancement, Pattern recognition letters 2018.
+- [Low-Light] Progressive retinex: Mutually reinforced illumination-noise perception network for low-light image enhancement, ACM-MM 2019.
+- [Low-Light] Retinex-inspired unrolling with cooperative prior architecture search for low-light image enhancement, CVPR 2021.
 
 ## 1.6 Explicit Modelling Kernel and Noise Information as Prior
 Modeling kernel and noise information can provide extra information and perform image-specific restoration.
@@ -321,8 +350,26 @@ Modeling kernel and noise information can provide extra information and perform 
 |ICCV 2021 | C2N: Practical Generative Noise Modeling for Real-World Denoising | Denoising | Synthetic noise modeling |
 
 ### 1.6.1 Explicit Modelling in Modular Design
+- [Super-resolution] Learning a single convolutional super-resolution network for multiple degradations, CVPR 2018.
+- [Super-resolution] Unified dynamic convolutional network for super-resolution with variational degradations, CVPR 2020.
+- [Super-resolution] Deep plug-and-play super-resolution for arbitrary blur kernels, CVPR 2019.
+- [Super-resolution] Neural blind deconvolution using deep priors, CVPR 2020.
+- [Super-resolution] Learning the Non-differentiable Optimization for Blind Super-Resolution, CVPR 2021.
+- [Denoising] FFDNet: Toward a fast and flexible solution for CNN-based image denoising, TIP 2018.
+- [Super-resolution] Blind super-resolution kernel estimation using an internal-gan, NIPS 2019.
+- [Super-resolution] Flow-based kernel prior with application to blind super-resolution, CVPR 2021.
+- [Super-resolution] Blind super-resolution with iterative kernel correction, CVPR 2019.
+- [Super-resolution] Unfolding the alternating optimization for blind super resolution, NIPS 2020.
+- [Denoising] Toward convolutional blind denoising of real photographs, CVPR 2019.
 
 ### 1.6.2 Explicit Modelling in Training Set Synthetic
+- [Super-resolution] Kernel modeling super-resolution on real low-resolution images, ICCV 2019.
+- [Super-resolution] Real-world super-resolution via kernel estimation and noise injection, CVPRW 2020.
+- [Deblurring] Explore image deblurring via encoded blur kernel space, CVPR 2021.
+- [Denoising] Image blind denoising with generative adversarial network based noise modeling, CVPR 2018.
+- [Denoising] C2N: Practical Generative Noise Modeling for Real-World Denoising, ICCV 2021.
+- [Super-resolution] Unsupervised degradation representation learning for blind super-resolution, CVPR 2021.
+- [Super-resolution] Classsr: A general framework to accelerate super-resolution networks by data characteristic, CVPR 2021.
 
 ## 1.7 Data Degradation as Prior
 ### 1.7.1 Motion Blur Model
@@ -384,13 +431,43 @@ CVPR 2021|GAN prior embedded network for blind face restoration in the wild |Fac
 WACV 2022|Deep Feature Prior Guided Face Deblurring  |Face Deblur     |Recognition Model     |Deep features of face recognition networks  
 
 ## 2.3 Deep Image Prior
+- [Restoration] Deep Image Prior, IJCV 2020.
+- [Theory] Deep decoder: Concise image representations from untrained non-convolutional networks?, arXiv 2018.
+- [Denoising] Noise2Void - Learning Denoising From Single Noisy Images, CVPR 2019.
+- [Theory] Neural blind deconvolution using deep priors, CVPR 2020.
+- [Restoration] CLEARER: Multi-Scale Neural Architecture Search for Image Restoration, 2020.
+- [Theory] Neural architecture search with reinforcement learning, arXiv 2016.
+- [Restoration] ISNAS-DIP: Image-Specific Neural Architecture Search for Deep Image Prior, arXiv 2021.
+- [Restoration] Neural architecture search for deep image prior, Computers & Graphics 2021.
+- [Restoration] "double-dip": Unsupervised image decomposition via coupled deep-image-priors, CVPR 2019.
+- [Dehazing] Zero-shot image dehazing, IEEE TIP 2020.
+- [Denoising] Self2Self With Dropout: Learning Self-Supervised Denoising From Single Image, CVPR 2020.
+- [Denoising] Rethinking Deep Image Prior for Denoising, ICCV 2021.
+- [Restoration] A bayesian perspective on the deep image prior, CVPR 2019.
+- [Denoising] Self-Supervised Image Prior Learning With GMM From a Single Noisy Image, ICCV 2021.
+- [Restoration] DeepRED: Deep image prior powered by RED, ICCVW 2019.
+- [Restoration] Rare: Image reconstruction using deep priors learned without groundtruth, IEEE JSTSP 2020.
+- [Denoising] Dynamic PET image denoising using deep image prior combined with regularization by denoising, IEEE Access 2021.
+- [Video-Restoration] Blind video temporal consistency via deep video prior, NIPS 2020.
+- [Video-Restoration] Deep Video Prior for Video Consistency and Propagation, IEEE TPAMI 2022.
 
 ## 2.4 Pre-trained Model as Prior
 
-### 2.4.1 GAN Prior
+### 2.4.1 GAN Inversion as Prior
+- [Theory] A style-based generator architecture for generative adversarial networks, CVPR 2019.
+- [Super-Resolution] PULSE: Self-Supervised Photo Upsampling via Latent Space Exploration of Generative Models, CVPR 2020.
+- [Super-Resolution] GLEAN: Generative Latent Bank for Large-Factor Image Super-Resolution, CVPR 2021.
+- [Face-restoration] Towards real-world blind face restoration with generative facial prior, CVPR 2021.
+- [Restoration] Exploiting Deep Generative Prior for Versatile Image Restoration and Manipulation, TPAMI 2021.
 
-### 2.4.2 Generative Priors in Training Set Synthetic
+### 2.4.2 Generative Priors for Training Set Synthetic
+- [Super-Resolution] To learn image super-resolution, use a gan to learn how to do image degradation first, ECCV 2018.
+- [Super-Resolution] Unsupervised real-world image super resolution via domain-distance aware training, CVPR 2021.
+- [Deblurring] Deblurring by realistic blurring, CVPR 2020.
 
-### 2.4.3 Deep Denoiser Prior for Regularization
-
+### 2.4.3 Deep Denoiser Prior for Model-based Methods
+- [Restoration] Learning deep CNN denoiser prior for image restoration, CVPR 2017.
+- [Restoration] Plug-and-play image restoration with deep denoiser prior, TPAMI 2021.
+- [Restoration] Denoising prior driven deep neural network for image restoration, TPAMI 2018.
+- [Super-Resolution] Deep unfolding network for image super-resolution, CVPR 2020.
 
