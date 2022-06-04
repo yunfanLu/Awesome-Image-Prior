@@ -18,11 +18,11 @@
 <h2>Table of contents</h2>
 
 - [1.Ruled Prior](#1ruled-prior)
-  - [1.1 Image Statistical Features as Prior](#11-image-statistical-features-as-prior)
+  - [1.1 Physical-based Prior](#11-physical-based-prior)
   - [1.2 Temporal Prior](#12-temporal-prior)
-  - [1.3 Transformation as Prior](#13-transformation-as-prior)
-  - [1.4 Physical-based Priors](#14-physical-based-priors)
-  - [1.5 Explicit Modelling Kernel and Noise Information as Prior](#15-explicit-modelling-kernel-and-noise-information-as-prior)
+  - [1.3 Statistical Image Feature as Prior](#13-statistical-image-feature-as-prior)
+  - [1.4 Transformation as Prior](#14-transformation-as-prior)
+  - [1.5 Kernel and Noise Information as Prior](#15-kernel-and-noise-information-as-prior)
   - [1.6 High-Level Semantic Information as Prior](#16-high-level-semantic-information-as-prior)
 - [2. Latent Prior](#2-latent-prior)
   - [2.1 Non-local Self-similarity](#21-non-local-self-similarity)
@@ -40,62 +40,70 @@
   - [3.8 Video Super Slow Motion](#38-video-super-slow-motion)
 
 # 1.Ruled Prior
-## 1.1 Image Statistical Features as Prior
-Statistical image features can be divided into two categories, the statistical intensity features and the statistical gradient features.
+
+
+## 1.1 Physical-based Prior
+Physical model can simplify the learning target compared to the directly output high-quality image.
 
 <h2>Representative work</h2>
 
-|Publication|Title|Task|Statistical Features|Highlight|
+|Publication|Title|Task|Physical Prior|Highlight|
 |-|-|-|-|-|
-[PAMI 2016](https://openreview.net/pdf?id=IucGD5fQBV)|L0 -regularized intensity and gradient prior for deblurring text images and beyond|Text deblurring|Two-tone distribution| $L_0$ regularization; Two-tone distribution 
-[CVPR 2016](https://openaccess.thecvf.com/content_cvpr_2016/papers/Pan_Blind_Image_Deblurring_CVPR_2016_paper.pdf)|Blind image deblurring using dark channel prior| Deblurring| Dark channel| First work; Min operator linear approximation 
-[CVPR 2017](https://openaccess.thecvf.com/content_cvpr_2017/papers/Yan_Image_Deblurring_via_CVPR_2017_paper.pdf)|Image deblurring via extreme channels prior| Deblurring| Bright channel| First work; Kernel estimation; Bright image 
-ICIP 2017|Low-light image enhancement using CNN and bright channel prior| Low-light enhancement | Bright channel| As a part of the CNN model 
-TIP 2017|Deep edge guided recurrent residual learning for image super-resolution| Super Resolution| Edge guided | First recurrent network model in SR  
-CVPR 2019 | Blind image deblurring with local maximum gradient prior| Deblurring| Local maximum gradient prior  | First work; Local maximum gradient prior
-AI 2019   | Single image dehazing using gradient channel prior| Dehazing| Gradient channel prior  | Gradient prior; Depth map 
-ISPL 2020 |Unsupervised low-light image enhancement using bright channel prior| Low-light enhancement | Bright channel| Unsupervised learning approach 
-CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super Resolution| Gradient guidance | Proposed Gradient maps 
+TIP 2016 | Dehazenet: An end-to-end system for single image haze removal | Dehazing | ASM | Estimate transmission map|
+ECCV 2016 | Single image dehazing via multi-scale convolutional neural networks  | Dehazing | ASM | Estimate transmission map |
+ICCV 2017 | Aod-net: All-in-one dehazing network | Dehazing | ASM | Estimate an intermediate parameter by reformulated ASM |
+CVPR 2018 | Densely connected pyramid dehazing network| Dehazing | ASM | Jointly estimate transmission map and atmospheric light|
+IJCAI 2018 | DehazeGAN: When Image Dehazing Meets Differential Programming. | Dehazing | ASM | Estimate an intermediate parameter by reformulated ASM |
+TIP 2019 | FAMED-Net: A fast and accurate multi-scale end-to-end dehazing network | Dehazing | ASM | Estimate an intermediate parameter by reformulated ASM |
+ECCV 2020 | Physics-based feature dehazing networks | Dehazing | ASM | Jointly estimate transmission map and atmospheric light|
+ECCV 2020 | BidNet: Binocular image dehazing without explicit disparity estimation | Dehazing | ASM | Jointly estimate transmission map and atmospheric light|
+ECCV 2020 | JSTASR: Joint size and transparency-aware snow removal algorithm based on modified partial convolution and veiling effect removal | Desnowing | ASM | Jointly estimate transmission map and atmospheric light |
+CVPR 2021 | Zero-Shot Single Image Restoration Through Controlled Perturbation of Koschmieder's Model | Dehazing</br>Underwater</br>Low-light | ASM |  Jointly estimate transmission map and atmospheric light |
+CVPR 2017 | Removing rain from single images via a deep detail network | Deraining | Rain Model | Residual learning |
+CVPR 2017 | Deep edge guided recurrent residual learning for image super-resolution  | Deraining | Rain Model | Recurrent Residual learning with multiple steak layer and rain mask|
+CVPR 2018 | Density-aware single image de-raining using a multi-stream dense network | Deraining | Rain Model | Residual learning with rain-density classifier|
+ECCV 2018 | Recurrent squeeze-and-excitation context aggregation net for single image deraining | Deraining | Rain Model | Recurrent Residual learning with multiple steak layer|
+CVPR 2018 | Erase or fill? deep joint recurrent rain removal and reconstruction in videos  | Video Deraining | Rain Model | Residual learning considering occlusion|
+CVPR 2019 | Depth-attentional features for single-image rain removal | Deraining | Rain Model | Residual learning with depth information guidance |
+CVPR 2019 | Frame-consistent recurrent video deraining with dual-level flow  | Video Deraining | Rain Model | Residual learning with temporal fusion |
+BMVC 2018 | Deep Retinex Decomposition for Low-Light Enhancement |  Low-light | Retinex Model | Estimate reflectance and illumination |
+PRL 2018 | LightenNet: A convolutional neural network for weakly illuminated image enhancement |  Low-light | Retinex Model | Estimate illumination|
+ACM MM 2019 | Kindling the darkness: A practical low-light image enhancer |  Low-light | Retinex Model | Estimate reflectance and illumination |
+ACM MM 2019 | Progressive retinex: Mutually reinforced illumination-noise perception network for low-light image enhancement |  Low-light | Retinex Model | Estimate illumination |
+IJCV 2021 | Beyond brightening low-light images |  Low-light | Retinex Model | Estimate reflectance and illumination |
+TIP 2021 | Sparse gradient regularized deep retinex network for robust low-light image enhancement |  Low-light | Retinex Model | Estimate reflectance and illumination|
+CVPR 2021 | Retinex-inspired unrolling with cooperative prior architecture search for low-light image enhancement |  Low-light | Retinex Model | Estimate illumination|
 
----
+### 1.1.1 Atmospheric Scattering Model
+- [Theory] Vision in bad weather, ICCV 1999.
+- [Theory] Contrast restoration of weather degraded images, TPAMI 2003.
+- [Dehazing] Dehazenet: An end-to-end system for single image haze removal, TIP 2016.
+- [Dehazing] Densely connected pyramid dehazing network, CVPR 2018.
+- [Dehazing] Aod-net: All-in-one dehazing network, ICCV 2017.
+- [Dehazing] DehazeGAN: When Image Dehazing Meets Differential Programming., IJCAI 2018.
+- [Dehazing] FAMED-Net: A fast and accurate multi-scale end-to-end dehazing network, TIP 2019.
+- [Dehazing] Physics-based feature dehazing networks, ECCV 2020.
+- [Desnowing] JSTASR: Joint size and transparency-aware snow removal algorithm based on modified partial convolution and veiling effect removal, ECCV 2020.
+- [Restoration] Zero-Shot Single Image Restoration Through Controlled Perturbation of Koschmieder's Model, CVPR 2021.
 
-### 1.1.1 Statistical Intensity Features
-Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
+### 1.1.2 Rain Model
+- [Deraining] Rain streak removal using layer priors, CVPR 2016.
+- [Deraining] Removing rain from single images via a deep detail network, CVPR 2017.
+- [Deraining] Density-aware single image de-raining using a multi-stream dense network, CVPR 2018.
+- [Super-resolution] Deep edge guided recurrent residual learning for image super-resolution, TIP 2017.
+- [Deraining] Erase or fill? deep joint recurrent rain removal and reconstruction in videos, CVPR 2018.
+- [Deraining] Frame-consistent recurrent video deraining with dual-level flow, CVPR 2019.
+- [Deraining] Depth-attentional features for single-image rain removal, CVPR 2019.
 
-#### dark channels prior
-- [Deblurring] Blind image deblurring using dark channel prior, CVPR 2016.
-- [Dehazing] Single image haze removal using dark channel prior, IEEE TPAMI 2010.
-
-#### bright channels prior
-- [Deblurring] Image deblurring via extreme channels prior, CVPR 2017.
-- [Low-light] Low-light image enhancement using CNN and bright channel prior, ICPC 2017.
-- [Low-light] Unsupervised low-light image enhancement using bright channel prior, IEEE Signal Processing Letters 2010.
-
-#### two-tone distribution
-- [Deblurring] L0 -regularized intensity and gradient prior for deblurring text images and beyond, TPAMI 2016.
-
-#### two-color prior
-- [Deblurring&Denoising] Image deblurring and denoising using color priors, CVPR 2009.
-
-#### histogram equalization prior
-- [Survey] Histogram equalization variants as optimization problems: a review, Archives of Computational Methods in Engineering 2021. 
-- [Image-enhancement] Underwater image enhancement with global--local networks and compressed-histogram equalization, Signal Processing: Image Communication 2020.
-
----
-
-### 1.1.2 Statistical Gradient Feature
-Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
-
-#### local maximum gradient prior
-- [Deblurring] Blind image deblurring with local maximum gradient prior, CVPR 2019.
-  
-#### gradient guidance prior
-- [Super-resolution] Image super-resolution using gradient profile prior, CVPR 2008.
-- [Super-resolution] Structure-preserving super resolution with gradient guidance, CVPR 2020.
-
-#### gradient channel prior
-- [Dehazing] Single image dehazing using gradient channel prior, Applied Intelligence 2019.
-- [Dehazing] Color image dehazing using gradient channel prior and guided l0 filter, Information Sciences 2020.
+### 1.1.3 Retinex Model
+- [Theory] An alternative technique for the computation of the designator in the retinex theory of color vision,1986.
+- [Low-Light] Deep Retinex Decomposition for Low-Light Enhancement, BMVC 2018.
+- [Low-Light] Kindling the darkness: A practical low-light image enhancer, ACM-MM 2019.
+- [Low-Light] Beyond brightening low-light images, IJCV 2021.
+- [Low-Light] Sparse gradient regularized deep retinex network for robust low-light image enhancement, TIP 2021.
+- [Low-Light] LightenNet: A convolutional neural network for weakly illuminated image enhancement, Pattern recognition letters 2018.
+- [Low-Light] Progressive retinex: Mutually reinforced illumination-noise perception network for low-light image enhancement, ACM-MM 2019.
+- [Low-Light] Retinex-inspired unrolling with cooperative prior architecture search for low-light image enhancement, CVPR 2021.
 
 ---
 
@@ -175,7 +183,68 @@ Temporal sharpness prior is a specific prior in video deblurring based on the hy
 
 ---
 
-## 1.3 Transformation as Prior
+
+## 1.3 Statistical Image Feature as Prior
+Statistical image features can be divided into two categories, the statistical intensity features and the statistical gradient features.
+
+<h2>Representative work</h2>
+
+|Publication|Title|Task|Statistical Features|Highlight|
+|-|-|-|-|-|
+[PAMI 2016](https://openreview.net/pdf?id=IucGD5fQBV)|L0 -regularized intensity and gradient prior for deblurring text images and beyond|Text deblurring|Two-tone distribution| $L_0$ regularization; Two-tone distribution 
+[CVPR 2016](https://openaccess.thecvf.com/content_cvpr_2016/papers/Pan_Blind_Image_Deblurring_CVPR_2016_paper.pdf)|Blind image deblurring using dark channel prior| Deblurring| Dark channel| First work; Min operator linear approximation 
+[CVPR 2017](https://openaccess.thecvf.com/content_cvpr_2017/papers/Yan_Image_Deblurring_via_CVPR_2017_paper.pdf)|Image deblurring via extreme channels prior| Deblurring| Bright channel| First work; Kernel estimation; Bright image 
+ICIP 2017|Low-light image enhancement using CNN and bright channel prior| Low-light enhancement | Bright channel| As a part of the CNN model 
+TIP 2017|Deep edge guided recurrent residual learning for image super-resolution| Super Resolution| Edge guided | First recurrent network model in SR  
+CVPR 2019 | Blind image deblurring with local maximum gradient prior| Deblurring| Local maximum gradient prior  | First work; Local maximum gradient prior
+AI 2019   | Single image dehazing using gradient channel prior| Dehazing| Gradient channel prior  | Gradient prior; Depth map 
+ISPL 2020 |Unsupervised low-light image enhancement using bright channel prior| Low-light enhancement | Bright channel| Unsupervised learning approach 
+CVPR 2020 | Structure-preserving super resolution with gradient guidance| Super Resolution| Gradient guidance | Proposed Gradient maps 
+
+---
+
+### 1.3.1 Statistical Intensity Features
+Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
+
+#### dark channels prior
+- [Deblurring] Blind image deblurring using dark channel prior, CVPR 2016.
+- [Dehazing] Single image haze removal using dark channel prior, IEEE TPAMI 2010.
+
+#### bright channels prior
+- [Deblurring] Image deblurring via extreme channels prior, CVPR 2017.
+- [Low-light] Low-light image enhancement using CNN and bright channel prior, ICPC 2017.
+- [Low-light] Unsupervised low-light image enhancement using bright channel prior, IEEE Signal Processing Letters 2010.
+
+#### two-tone distribution
+- [Deblurring] L0 -regularized intensity and gradient prior for deblurring text images and beyond, TPAMI 2016.
+
+#### two-color prior
+- [Deblurring&Denoising] Image deblurring and denoising using color priors, CVPR 2009.
+
+#### histogram equalization prior
+- [Survey] Histogram equalization variants as optimization problems: a review, Archives of Computational Methods in Engineering 2021. 
+- [Image-enhancement] Underwater image enhancement with global--local networks and compressed-histogram equalization, Signal Processing: Image Communication 2020.
+
+---
+
+### 1.3.2 Statistical Gradient Feature
+Statistical features of high-quality image intensity have strong sparsity, which means the feature map or statistical values are mostly zeros. Their specific performance includes dark channel prior, bright channel prior, and two-tone distribution.
+
+#### local maximum gradient prior
+- [Deblurring] Blind image deblurring with local maximum gradient prior, CVPR 2019.
+  
+#### gradient guidance prior
+- [Super-resolution] Image super-resolution using gradient profile prior, CVPR 2008.
+- [Super-resolution] Structure-preserving super resolution with gradient guidance, CVPR 2020.
+
+#### gradient channel prior
+- [Dehazing] Single image dehazing using gradient channel prior, Applied Intelligence 2019.
+- [Dehazing] Color image dehazing using gradient channel prior and guided l0 filter, Information Sciences 2020.
+
+
+---
+
+## 1.4 Transformation as Prior
 Transforming image to different domain can bring favorable properties for network training e.g., some noise pattern are more apparent in certain frequency sub-bands.
 
 <h2>Representative work</h2>
@@ -197,7 +266,7 @@ ICCV 2021 | Fourier space losses for efficient perceptual image super-resolution
 ICCV 2021 | ALL Snow Removed: Single Image Desnowing Algorithm Using Hierarchical Dual-Tree Complex Wavelet Representation and Contradict Channel Loss | Desnowing | Wavelet | Use as input and output in CNN |
 
 ---
-### 1.3.1 Learning with Frequency Information
+### 1.4.1 Learning with Frequency Information
 Transforming data into the frequency domain, such as using Discrete Fourier Transform (DFT) or Discrete Wavelet Transform (DWT), allows data to be decomposed with different frequency sub-bans for component-wise analysis, and has been widely studied for image restoration before deep learning era.
 
 - [Theory] A theory for multiresolution signal decomposition: the wavelet representation, TPAMI 1989.
@@ -216,7 +285,7 @@ Transforming data into the frequency domain, such as using Discrete Fourier Tran
 - [Image-restoration] Multi-level wavelet-CNN for image restoration, CVPRW 2018.
 - [Denoising] Burst Denoising via Temporally Shifted Wavelet Transforms, ECCV 2020.
 
-### 1.3.2 Other Transformation
+### 1.4.2 Other Transformation
 There are also other transformations that can serve as informative prior for image restoration and enhancement tasks by emphasizing some significant patterns of images.
 
 - [Super-resolution] Deep edge guided recurrent residual learning for image super-resolution, TIP 2017.
@@ -229,72 +298,8 @@ There are also other transformations that can serve as informative prior for ima
 
 ---
 
-## 1.4 Physical-based Priors
-Physical model can simplify the learning target compared to the directly output high-quality image.
 
-<h2>Representative work</h2>
-
-|Publication|Title|Task|Physical Prior|Highlight|
-|-|-|-|-|-|
-TIP 2016 | Dehazenet: An end-to-end system for single image haze removal | Dehazing | ASM | Estimate transmission map|
-ECCV 2016 | Single image dehazing via multi-scale convolutional neural networks  | Dehazing | ASM | Estimate transmission map |
-ICCV 2017 | Aod-net: All-in-one dehazing network | Dehazing | ASM | Estimate an intermediate parameter by reformulated ASM |
-CVPR 2018 | Densely connected pyramid dehazing network| Dehazing | ASM | Jointly estimate transmission map and atmospheric light|
-IJCAI 2018 | DehazeGAN: When Image Dehazing Meets Differential Programming. | Dehazing | ASM | Estimate an intermediate parameter by reformulated ASM |
-TIP 2019 | FAMED-Net: A fast and accurate multi-scale end-to-end dehazing network | Dehazing | ASM | Estimate an intermediate parameter by reformulated ASM |
-ECCV 2020 | Physics-based feature dehazing networks | Dehazing | ASM | Jointly estimate transmission map and atmospheric light|
-ECCV 2020 | BidNet: Binocular image dehazing without explicit disparity estimation | Dehazing | ASM | Jointly estimate transmission map and atmospheric light|
-ECCV 2020 | JSTASR: Joint size and transparency-aware snow removal algorithm based on modified partial convolution and veiling effect removal | Desnowing | ASM | Jointly estimate transmission map and atmospheric light |
-CVPR 2021 | Zero-Shot Single Image Restoration Through Controlled Perturbation of Koschmieder's Model | Dehazing</br>Underwater</br>Low-light | ASM |  Jointly estimate transmission map and atmospheric light |
-CVPR 2017 | Removing rain from single images via a deep detail network | Deraining | Rain Model | Residual learning |
-CVPR 2017 | Deep edge guided recurrent residual learning for image super-resolution  | Deraining | Rain Model | Recurrent Residual learning with multiple steak layer and rain mask|
-CVPR 2018 | Density-aware single image de-raining using a multi-stream dense network | Deraining | Rain Model | Residual learning with rain-density classifier|
-ECCV 2018 | Recurrent squeeze-and-excitation context aggregation net for single image deraining | Deraining | Rain Model | Recurrent Residual learning with multiple steak layer|
-CVPR 2018 | Erase or fill? deep joint recurrent rain removal and reconstruction in videos  | Video Deraining | Rain Model | Residual learning considering occlusion|
-CVPR 2019 | Depth-attentional features for single-image rain removal | Deraining | Rain Model | Residual learning with depth information guidance |
-CVPR 2019 | Frame-consistent recurrent video deraining with dual-level flow  | Video Deraining | Rain Model | Residual learning with temporal fusion |
-BMVC 2018 | Deep Retinex Decomposition for Low-Light Enhancement |  Low-light | Retinex Model | Estimate reflectance and illumination |
-PRL 2018 | LightenNet: A convolutional neural network for weakly illuminated image enhancement |  Low-light | Retinex Model | Estimate illumination|
-ACM MM 2019 | Kindling the darkness: A practical low-light image enhancer |  Low-light | Retinex Model | Estimate reflectance and illumination |
-ACM MM 2019 | Progressive retinex: Mutually reinforced illumination-noise perception network for low-light image enhancement |  Low-light | Retinex Model | Estimate illumination |
-IJCV 2021 | Beyond brightening low-light images |  Low-light | Retinex Model | Estimate reflectance and illumination |
-TIP 2021 | Sparse gradient regularized deep retinex network for robust low-light image enhancement |  Low-light | Retinex Model | Estimate reflectance and illumination|
-CVPR 2021 | Retinex-inspired unrolling with cooperative prior architecture search for low-light image enhancement |  Low-light | Retinex Model | Estimate illumination|
-
-### 1.4.1 Atmospheric Scattering Model
-- [Theory] Vision in bad weather, ICCV 1999.
-- [Theory] Contrast restoration of weather degraded images, TPAMI 2003.
-- [Dehazing] Dehazenet: An end-to-end system for single image haze removal, TIP 2016.
-- [Dehazing] Densely connected pyramid dehazing network, CVPR 2018.
-- [Dehazing] Aod-net: All-in-one dehazing network, ICCV 2017.
-- [Dehazing] DehazeGAN: When Image Dehazing Meets Differential Programming., IJCAI 2018.
-- [Dehazing] FAMED-Net: A fast and accurate multi-scale end-to-end dehazing network, TIP 2019.
-- [Dehazing] Physics-based feature dehazing networks, ECCV 2020.
-- [Desnowing] JSTASR: Joint size and transparency-aware snow removal algorithm based on modified partial convolution and veiling effect removal, ECCV 2020.
-- [Restoration] Zero-Shot Single Image Restoration Through Controlled Perturbation of Koschmieder's Model, CVPR 2021.
-
-### 1.4.2 Rain Model
-- [Deraining] Rain streak removal using layer priors, CVPR 2016.
-- [Deraining] Removing rain from single images via a deep detail network, CVPR 2017.
-- [Deraining] Density-aware single image de-raining using a multi-stream dense network, CVPR 2018.
-- [Super-resolution] Deep edge guided recurrent residual learning for image super-resolution, TIP 2017.
-- [Deraining] Erase or fill? deep joint recurrent rain removal and reconstruction in videos, CVPR 2018.
-- [Deraining] Frame-consistent recurrent video deraining with dual-level flow, CVPR 2019.
-- [Deraining] Depth-attentional features for single-image rain removal, CVPR 2019.
-
-### 1.4.3 Retinex Model
-- [Theory] An alternative technique for the computation of the designator in the retinex theory of color vision,1986.
-- [Low-Light] Deep Retinex Decomposition for Low-Light Enhancement, BMVC 2018.
-- [Low-Light] Kindling the darkness: A practical low-light image enhancer, ACM-MM 2019.
-- [Low-Light] Beyond brightening low-light images, IJCV 2021.
-- [Low-Light] Sparse gradient regularized deep retinex network for robust low-light image enhancement, TIP 2021.
-- [Low-Light] LightenNet: A convolutional neural network for weakly illuminated image enhancement, Pattern recognition letters 2018.
-- [Low-Light] Progressive retinex: Mutually reinforced illumination-noise perception network for low-light image enhancement, ACM-MM 2019.
-- [Low-Light] Retinex-inspired unrolling with cooperative prior architecture search for low-light image enhancement, CVPR 2021.
-
----
-
-## 1.5 Explicit Modelling Kernel and Noise Information as Prior
+## 1.5 Kernel and Noise Information as Prior
 Modeling kernel and noise information can provide extra information and perform image-specific restoration.
 
 <h2>Representative work</h2>
