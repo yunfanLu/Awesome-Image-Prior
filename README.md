@@ -15,6 +15,7 @@
 
 
 
+
 <h2>Table of contents</h2>
 
 - [1.Ruled Prior](#1ruled-prior)
@@ -64,6 +65,7 @@
   - [3.7 HDR](#37-hdr)
   - [3.8 Video Super Slow Motion](#38-video-super-slow-motion)
 
+![](img/1-prior-application.png)
 # 1.Ruled Prior
 
 
