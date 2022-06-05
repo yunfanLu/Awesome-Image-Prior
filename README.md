@@ -19,16 +19,41 @@
 
 - [1.Ruled Prior](#1ruled-prior)
   - [1.1 Physical-based Prior](#11-physical-based-prior)
+    - [1.1.1 Atmospheric Scattering Model](#111-atmospheric-scattering-model)
+    - [1.1.2 Rain Model](#112-rain-model)
+    - [1.1.3 Retinex Model](#113-retinex-model)
   - [1.2 Temporal Prior](#12-temporal-prior)
+    - [1.2.1 Optical Flow](#121-optical-flow)
+      - [Deep learning-based optical methods](#deep-learning-based-optical-methods)
+      - [Deep learning-based optical methods](#deep-learning-based-optical-methods-1)
+    - [1.2.2 Temporal Sharpness Prior](#122-temporal-sharpness-prior)
   - [1.3 Statistical Image Feature as Prior](#13-statistical-image-feature-as-prior)
+    - [1.3.1 Statistical Intensity Features](#131-statistical-intensity-features)
+      - [dark channels prior](#dark-channels-prior)
+      - [bright channels prior](#bright-channels-prior)
+      - [two-tone distribution](#two-tone-distribution)
+      - [two-color prior](#two-color-prior)
+      - [histogram equalization prior](#histogram-equalization-prior)
+    - [1.3.2 Statistical Gradient Feature](#132-statistical-gradient-feature)
+      - [local maximum gradient prior](#local-maximum-gradient-prior)
+      - [gradient guidance prior](#gradient-guidance-prior)
+      - [gradient channel prior](#gradient-channel-prior)
   - [1.4 Transformation as Prior](#14-transformation-as-prior)
+    - [1.4.1 Learning with Frequency Information](#141-learning-with-frequency-information)
+    - [1.4.2 Other Transformation](#142-other-transformation)
   - [1.5 Kernel and Noise Information as Prior](#15-kernel-and-noise-information-as-prior)
+    - [1.5.1 Explicit Modelling in Modular Design](#151-explicit-modelling-in-modular-design)
+    - [1.5.2 Explicit Modelling in Training Set Synthetic](#152-explicit-modelling-in-training-set-synthetic)
+    - [1.5.3 Others](#153-others)
   - [1.6 High-Level Semantic Information as Prior](#16-high-level-semantic-information-as-prior)
 - [2. Latent Prior](#2-latent-prior)
   - [2.1 Non-local Self-similarity](#21-non-local-self-similarity)
   - [2.2 Facial Prior](#22-facial-prior)
   - [2.3 Deep Image Prior](#23-deep-image-prior)
   - [2.4 Pre-trained Model as Prior](#24-pre-trained-model-as-prior)
+    - [2.4.1 GAN Inversion as Prior](#241-gan-inversion-as-prior)
+    - [2.4.2 Generative Priors for Training Set Synthetic](#242-generative-priors-for-training-set-synthetic)
+    - [2.4.3 Deep Denoiser Prior for Model-based Methods](#243-deep-denoiser-prior-for-model-based-methods)
 - [3. Image Enhancement Task and Dataset](#3-image-enhancement-task-and-dataset)
   - [3.1 Denoise](#31-denoise)
   - [3.2 Demosaicing](#32-demosaicing)
@@ -186,6 +211,8 @@ Temporal sharpness prior is a specific prior in video deblurring based on the hy
 
 ## 1.3 Statistical Image Feature as Prior
 Statistical image features can be divided into two categories, the statistical intensity features and the statistical gradient features.
+
+![](img/4-semantic.png)
 
 <h2>Representative work</h2>
 
