@@ -164,7 +164,7 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 
 ---
 #### Deep learning-based optical methods
-![](img/optical-flow.png)
+![](img/optical-flow.jpg)
 
 **(a)** Directly use optical flow in video super-resolution
 
