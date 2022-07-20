@@ -438,10 +438,14 @@ The high-level information refers to using semantic segmentation or object detec
 ## 2.1 Non-local Self-similarity
 Non-local self-similarity prior can help restore and enhance specific details with the reappearance patches in an image.
 
+
+![](img/2.1.similarity.png)
+
 - [Denoising] Image denoising by sparse 3-D transform-domain collaborative filtering, TIP 2007.
 - [Denoising] Weighted nuclear norm minimization with application to image denoising, CVPR 2014.
 - [Super-resolution] Image super-resolution with cross-scale non-local attention and exhaustive self-exemplars mining, CVPR 2020.
 - [Super-resolution] Image super-resolution with non-local sparse attention, CVPR 2021.
+- [Super-resolution] [Transformer for Single Image Super-Resolution, CVPRW, 2022](https://openaccess.thecvf.com/content/CVPR2022W/NTIRE/papers/Lu_Transformer_for_Single_Image_Super-Resolution_CVPRW_2022_paper.pdf)
 - [Restoration] Residual non-local attention networks for image restoration, arXiv 2019.
 - [Restoration] Image restoration via simultaneous nonlocal self-similarity priors, TIP 2020.
 - [Restoration] Non-local recurrent network for image restoration, NIPS 2018.
