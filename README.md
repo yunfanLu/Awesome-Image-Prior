@@ -151,9 +151,11 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 |CVPR 2020|Cascaded deep video deblurring using temporal sharpness prior| Video deblurring | PWC-Net | Use optical flow to construct the temporal sharpness prior|
 |CVPR 2021|Arvo: Learning all-range volumetric correspondence for video deblurring| Video deblurring | PWC-Net | Use optical flow to construct the temporal sharpness prior|
 |CVPR 2021|Bringing events into video deblurring with non-consecutively blurry frames| Video deblurring | PWC-Net | Use optical flow to construct the temporal sharpness prior|
+|ECCV 2022| [Efficient Video Deblurring Guided by Motion Magnitude](https://arxiv.org/abs/2207.13374) |Video deblurring| RAFT| Utilizing the information from clear regions in adjacent frames for current frame deblurring by optical flow| 
 |CVPR 2019|Frame-consistent recurrent video deraining with dual-level flow| Video derainingR |FlowNet| Optical flow help extract the temporal rain-related feature|
 |ICCP 2019|A fast, scalable, and reliable deghosting method for extreme exposure fusion| Multi-Exposure HDR |PWC-Net| Align multi-exposure image|
 |TPAMI 2019|Memc-net: Motion estimation and motion compensation driven neural network for video interpolation and enhancement|video frame interpolation |PWC-net| Lead the flow-based motion interpolation algorithms| 
+
 
 ---
 #### Deep learning-based optical methods
@@ -193,6 +195,7 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 - [Video-deblurring] Cascaded deep video deblurring using temporal sharpness prior, CVPR 2020.
 - [Video-deblurring] Bringing events into video deblurring with non-consecutively blurry frames, ICCV 2021.
 - [Video-deblurring] Arvo: Learning all-range volumetric correspondence for video deblurring, CVPR 2021.
+- [Video-deblurring] Efficient Video Deblurring Guided by Motion Magnitude, ECCV, 2022. [Project](https://github.com/sollynoay/MMP-RNN),[Paper](https://arxiv.org/abs/2207.13374)
 
 
 **Others:**
