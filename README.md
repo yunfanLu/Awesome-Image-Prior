@@ -14,8 +14,6 @@
 </p>
 
 
-
-
 <h2>Table of contents</h2>
 
 - [1.Ruled Prior](#1ruled-prior)
