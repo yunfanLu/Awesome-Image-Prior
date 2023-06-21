@@ -148,6 +148,12 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 |-|-|-|-|-|
 |CVPR 2018|Frame-recurrent video super-resolution| VSR | FNet  |  Recurrent framework with optical flow estimation network(FNet)|
 |IJCV 2019|Video enhancement with task-oriented flow| VSR | SPyNet| Task-oriented optical flow framework |
+|NTIRE 2021|BasicVSR++: Improving video super-resolution with enhanced propagation and alignment| VSR | SPyNet | Use optical flow to guide the DCN|
+|arXiv 2022|Vrt: A video restoration transformer| VSR | SPyNet | Use optical flow to guide the deep network based on self-attention |
+|CVPR 2020|Cascaded deep video deblurring using temporal sharpness prior| Video deblurring | PWC-Net | Use optical flow to construct the temporal sharpness prior|
+|CVPR 2021|Arvo: Learning all-range volumetric correspondence for video deblurring| Video deblurring | PWC-Net | Use optical flow to construct the temporal sharpness prior|
+|CVPR 2021|Bringing events into video deblurring with non-consecutively blurry frames| Video deblurring | PWC-Net | Use optical flow to construct the temporal sharpness prior|
+|ECCV 2022| [Efficient Video Deblurring Guided by Motion Magnitude](https://arxiv.org/abs/2207.13374) |Video deblurring| RAFT| Utilizing the information from clear regions in adjacent frames for current frame deblurring by optical flow|
 |CVPR 2019|Frame-consistent recurrent video deraining with dual-level flow| Video derainingR |FlowNet| Optical flow help extract the temporal rain-related feature|
 |ICCP 2019|A fast, scalable, and reliable deghosting method for extreme exposure fusion| Multi-Exposure HDR |PWC-Net| Align multi-exposure image|
 |TPAMI 2019|Memc-net: Motion estimation and motion compensation driven neural network for video interpolation and enhancement|video frame interpolation |PWC-net| Lead the flow-based motion interpolation algorithms|
@@ -162,6 +168,7 @@ Optical flow is the motion of objects, surfaces, and edges between consecutive f
 |CVPR 2022 | Craft: Cross-attentional flow transformer for robust optical flow| | |
 |CVPR 2022 | Camliflow: bidirectional camera-lidar fusion for joint optical flow and scene flow estimation | | |
 |PAMI 2023 | Cascaded Deep Video Deblurring Using Temporal Sharpness Prior and Non-local Spatial-Temporal Similarity | | |
+
 
 
 ---
