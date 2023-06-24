@@ -45,6 +45,7 @@
     - [1.5.2 Explicit Modelling in Training Set Synthetic](#152-explicit-modelling-in-training-set-synthetic)
     - [1.5.3 Others](#153-others)
   - [1.6 High-Level Semantic Information as Prior](#16-high-level-semantic-information-as-prior)
+  - [| ICRA 2022 |Semantic-aware Texture-Structure Feature Collaboration for Underwater Image Enhancement| Semantic | Underwarter image|](#-icra-2022-semantic-aware-texture-structure-feature-collaboration-for-underwater-image-enhancement-semantic--underwarter-image)
 - [2. Latent Prior](#2-latent-prior)
   - [2.1 Non-local Self-similarity](#21-non-local-self-similarity)
   - [2.2 Facial Prior](#22-facial-prior)
@@ -427,6 +428,7 @@ The high-level information refers to using semantic segmentation or object detec
 |ICCV 2021|Spatially-adaptive image restoration using distortion-guided networks| Image Restoration | Semantic  | *
 |ACM-MM 2022 |Close the Loop: A Unified Bottom-up and Top-down Paradigm for Joint Image Deraining and Segmentation| Deraining | Semantic  | Bottom-up and Top-down Paradigm
 
+| ICRA 2022 |Semantic-aware Texture-Structure Feature Collaboration for Underwater Image Enhancement| Semantic | Underwarter image|
 ---
 
 ![](img/14-high-level-guide.jpg)
