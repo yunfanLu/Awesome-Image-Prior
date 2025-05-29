@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 
 <p align="center">
-  <h2 align="center">Awesome-Image-Prior</h2>
+  <h2 align="center">Awesome-Image-Enhancement-Prior</h2>
   <p align="center">A curated list of resources for Prior in Image or Video
     <br />
     <br />
